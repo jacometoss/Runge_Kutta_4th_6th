@@ -35,7 +35,7 @@ endfunction
 
 ##  Archivo : rk6.sci
 
-Siendo necesario cambiar la línea que contiene  disp([t(i),r(1,i)',r(2,i)']) al incrementar las ecuaciones o solamente mostrar una.
+Siendo necesario cambiar la línea del archivo rk4 o rk6 que contiene  disp([t(i),r(1,i)',r(2,i)']) al incrementar las ecuaciones o únicamente al mostrar una al igual que las variables iniciames mostradas en el arhivo **attributes.sci**
 ```scilab
 function [t,r]=rk6(t0, tf, N, conIni)
     matrixSize= size(conIni,1)
@@ -59,3 +59,10 @@ end
 [t,r'];     
 endfunction
 ```
+
+##  Archivo : attributes.sci
+El archivo contiene los atributos de a simuñación
+   * ti: tiempo inicial de simulación
+    * tf: tiempo final de simulación
+    * varIni: variables iniciales
+    * muestras: muestras 
