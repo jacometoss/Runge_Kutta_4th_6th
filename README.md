@@ -17,11 +17,19 @@ De manera sencilla iniciamos el Start.sce
 
 ** runrk(4) para ejecucar Runge-Kutta 4to Orden  o  runrk(6) para ejecutar Runge-Kutta 4to Orden **
 
+##  Archivo : ecuDif.sci
 
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
+En el archivo ecuDif es necesario especificar las ecuaciones de estado. De esta manera Xdot contiene dos ecuaciones 
+```scilab
+function [Xdot]=ecuDif(t,x)
+  m=0.5;
+  b=0.1;
+  L=0.5;
+  g=9.81;
+  k=b/(m*L);
+ Xdot=zeros(2,1); //#Xdot
+ Xdot(1,1)=x(2);
+ Xdot(2,1)=-(g/L)*sin(x(1))-(k/m)*x(2);
+endfunction
+
 ```
