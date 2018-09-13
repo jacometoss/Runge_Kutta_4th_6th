@@ -61,8 +61,17 @@ endfunction
 ```
 
 ##  Archivo : attributes.sci
-El archivo contiene los atributos de a simuñación
+El archivo contiene los atributos de a simulación y debe establecer el número de condiciones iniciales, las cuales dependen de las variables de estado a resolver y siendo necesario modificar la impresion disp() de los arhivos rk4 y rk6
    * ti: tiempo inicial de simulación
    * tf: tiempo final de simulación
    * varIni: variables iniciales
-   * muestras: muestras 
+   * muestras: muestras
+```scilab   
+global ti tf varIni muestras    
+ti=0;
+tf=10;
+varIni=[0.01, 0.02]; //Cambiar #Xdot
+muestras=10000;
+
+```
+   
