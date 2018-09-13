@@ -15,5 +15,13 @@ Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implíc
 
 De manera sencilla iniciamos el Start.sce 
 
-** run(4) para ejecucar Runge-Kutta 4to Orden**
-** run(6) para ejecucar Runge-Kutta 4to Orden**
+** runrk(4) para ejecucar Runge-Kutta 4to Orden  o  runrk(6) para ejecutar Runge-Kutta 4to Orden **
+
+
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
