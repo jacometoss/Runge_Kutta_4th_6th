@@ -32,6 +32,9 @@ function [Xdot]=ecuDif(t,x)
  Xdot(2,1)=-(g/L)*sin(x(1))-(k/m)*x(2);
 endfunction
 ```
+
+##  Archivo : rk6.sci
+
 Siendo necesario cambiar la línea que contiene  disp([t(i),r(1,i)',r(2,i)']) al incrementar las ecuaciones o solamente mostrar una.
 ```scilab
 function [t,r]=rk6(t0, tf, N, conIni)
