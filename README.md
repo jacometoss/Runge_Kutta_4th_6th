@@ -63,6 +63,6 @@ endfunction
 ##  Archivo : attributes.sci
 El archivo contiene los atributos de a simuñación
    * ti: tiempo inicial de simulación
-    * tf: tiempo final de simulación
-    * varIni: variables iniciales
-    * muestras: muestras 
+   * tf: tiempo final de simulación
+   * varIni: variables iniciales
+   * muestras: muestras 
