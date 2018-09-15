@@ -2,6 +2,8 @@
 
 Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias.
 
+![GitHub Logo](https://image.ibb.co/jpL5qU/1.jpg)
+
 
 ##  Archivos 
 1. Star
