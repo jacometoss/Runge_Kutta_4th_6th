@@ -5,7 +5,9 @@ En esta documentación se muestra el de cuarto y sexto orden. Para dar solución
 
 ## ¿Por qué utilizar este código fuente ?
 
-Debido a su simplicidad de resolver varias ecuaciones de estado siendo flexible para dar solución a modelos de las maquinas eléctricas.
+Debido a su simplicidad de resolver varias ecuaciones de estado, siendo flexible para dar solución a modelos de  maquinas eléctricas.
+
+[Motor de Inducción](https://github.com/jacometoss/Motor_de_induccion)
 
 
 ![GitHub Logo](https://image.ibb.co/jpL5qU/1.jpg)
