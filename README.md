@@ -39,9 +39,9 @@ endfunction
 
 Siendo necesario cambiar la línea del archivo rk4 o rk6 que contiene  disp([t(i),r(1,i)',r(2,i)']) al incrementar las ecuaciones o únicamente al mostrar una al igual que las variables iniciames mostradas en el arhivo **attributes.sci**
 
-$
+$$
 y_{i+1}=y_{i}+ak_{1}+bk_{2}+ck_{3}+dk_{4}
-$
+$$
 
 ```scilab
 function [t,r]=rk6(t0, tf, N, conIni)
