@@ -3,6 +3,11 @@
 Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias.
 En esta documentación se muestra el de cuarto y sexto orden. Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4 o rk6.
 
+## ¿Por qué utilizar este código fuente ?
+
+Debido a su simplicidad de resolver varias ecuaciones de estado siendo flexible para dar solución a modelos de las maquinas eléctricas.
+
+
 ![GitHub Logo](https://image.ibb.co/jpL5qU/1.jpg)
 
 
