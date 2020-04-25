@@ -3,6 +3,14 @@
 # Runge Kutta 4to y 6to orden
 
 Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias.
+En esta documentación se muestra el de cuarto y sexto orden. Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4 o rk6.
+
+## ¿Por qué utilizar este código fuente ?
+
+Debido a su simplicidad de resolver varias ecuaciones de estado, siendo flexible para dar solución a modelos de  maquinas eléctricas.
+
+[Motor de Inducción](https://github.com/jacometoss/Motor_de_induccion)
+
 
 ![GitHub Logo](https://image.ibb.co/jpL5qU/1.jpg)
 
@@ -40,6 +48,8 @@ endfunction
 ##  Archivo : rk6.sci
 
 Siendo necesario cambiar la línea del archivo rk4 o rk6 que contiene  disp([t(i),r(1,i)',r(2,i)']) al incrementar las ecuaciones o únicamente al mostrar una al igual que las variables iniciames mostradas en el arhivo **attributes.sci**
+
+
 ```scilab
 function [t,r]=rk6(t0, tf, N, conIni)
     matrixSize= size(conIni,1)
