@@ -2,8 +2,7 @@
 
 # Runge Kutta 4to y 6to orden
 
-Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias.
-En esta documentación se muestra el de cuarto y sexto orden. Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4 o rk6.
+​	Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4 o rk6.
 
 ## ¿Por qué utilizar este código fuente ?
 
@@ -102,7 +101,7 @@ El archivo contiene los atributos de a simulación y debe establecer el número 
    * ti: tiempo inicial de simulación
    * tf: tiempo final de simulación
    * varIni: variables iniciales
-   * muestras: muestras
+   * muestras: muestras, 
 ```scilab   
 global ti tf varIni muestras    
 ti=0;
