@@ -1,3 +1,5 @@
+![VERSION](https://img.shields.io/badge/Scilab-6.0.2-lightgrey)
+
 # Runge Kutta 4to y 6to orden
 
 Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias.
@@ -99,4 +101,4 @@ varIni=[0.01, 0.02]; //Cambiar #Xdot
 muestras=10000;
 
 ```
-   
+
