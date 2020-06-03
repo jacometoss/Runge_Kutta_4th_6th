@@ -2,9 +2,9 @@
 
 # Runge Kutta 4to-6to orden y Regla Trapezoidal
 
-​	Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método de integración es la Regla Trapezoidal explicito.
+​	Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método de integración es la Regla Trapezoidal explicito. Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4(1), rk6(2), rtrapezoidal(3). 
 
-​	Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4(1), rk6(2), rtrapezoidal(3). La ventaja del "scripting" es poder dar solución en forma ordenada a **n** número de ecuaciones.
+​	La ventaja del "scripting" es poder dar solución en forma ordenada a **n** número de ecuaciones.
 
 ## ¿Por qué utilizar este código fuente ?
 
