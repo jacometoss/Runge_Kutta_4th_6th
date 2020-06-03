@@ -1,12 +1,14 @@
 ![VERSION](https://img.shields.io/badge/Scilab-6.0.2-lightgrey)
 
-# Runge Kutta 4to y 6to orden
+# Runge Kutta 4to-6to orden y Regla Trapezoidal
 
-​	Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4 o rk6.
+​	Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método de integración es la Regla Trapezoidal explicito.
+
+​	Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4(1), rk6(2), rtrapezoidal(3). La ventaja del "scripting" es poder dar solución en forma ordenada a **n** número de ecuaciones.
 
 ## ¿Por qué utilizar este código fuente ?
 
-Debido a su simplicidad de resolver varias ecuaciones de estado, siendo flexible para dar solución a modelos de  maquinas eléctricas.
+Debido a su simplicidad de resolver varias ecuaciones de estado, siendo flexible para dar solución a modelos de  máquinas eléctricas.
 
 [Motor de Inducción](https://github.com/jacometoss/Motor_de_induccion)
 
@@ -20,13 +22,15 @@ Debido a su simplicidad de resolver varias ecuaciones de estado, siendo flexible
     * ecuDif.sci
     * rk4.sci (Multi ecuaciones)
     * rk6.sci (Multi ecuaciones)
+    * rtrapezoidal (Multi ecuaciones) 
+    * mnecudif
 
 
 ##  Ejecución
 
 De manera sencilla iniciamos el Start.sce 
 
-** runrk(4) para ejecucar Runge-Kutta 4to Orden  o  runrk(6) para ejecutar Runge-Kutta 4to Orden **
+**Seleccione la forma de solución : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : **
 
 ##  Archivo : ecuDif.sci
 
@@ -96,7 +100,30 @@ end
 endfunction
 ```
 
+##  Archivo : rtrapezoidal.sci
+
+```scilab
+function [t,r]=rtrapezoidal(t0, tf, N, conIni)
+    matrixSize= size(conIni,1)
+    if  (matrixSize==1) then
+        conIni=conIni';
+    end
+h=(tf-t0)/N; //Paso
+t(1) = t0;
+r(:,1) = conIni; //Condiciones Iniciales
+for i = 1:N  //Seccion Modificable para matriz
+     disp([t(i),r(1,i)',r(2,i)']) //Cambiar #Xdot
+   y1 = r(:,i)+h*ecuDif(t(i), r(:,i));
+   y2 = r(:,i)+(h/2)*((ecuDif(t(i), r(:,i)))+(ecuDif(t(i)+h, y1)));
+   r(:,i+1) = y2;
+   t(i +1) = t0 + i*h;
+end
+[t,r'];     
+endfunction
+```
+
 ##  Archivo : attributes.sci
+
 El archivo contiene los atributos de a simulación y debe establecer el número de condiciones iniciales, las cuales dependen de las variables de estado a resolver y siendo necesario modificar la impresion disp() de los arhivos rk4 y rk6
    * ti: tiempo inicial de simulación
    * tf: tiempo final de simulación
