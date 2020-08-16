@@ -10,9 +10,6 @@
 
 Debido a su simplicidad de resolver varias ecuaciones de estado, siendo flexible para dar solución a modelos de  máquinas eléctricas.
 
-[Motor de Inducción](https://github.com/jacometoss/Motor_de_induccion)
-
-
 ![GitHub Logo](https://image.ibb.co/jpL5qU/1.jpg)
 
 
