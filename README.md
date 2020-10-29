@@ -1,19 +1,73 @@
-![VERSION](https://img.shields.io/badge/Scilab-6.0.2-lightgrey)
+# **Métodos de integración** 
 
-# Runge Kutta 4to-6to orden y Regla Trapezoidal
+# **Runge-Kutta  y Regla Trapezoidal**
 
-​	Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método de integración es la Regla Trapezoidal explicito. Para dar solución es necesario establecer las ecuaciones diferenciales y seleccionar rk4(1), rk6(2), rtrapezoidal(3). 
+​	Los métodos de Runge-Kutta (RK) son un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explicito. Para diferenciar los métodos de solución explicito e implicito  se agregan los dos puntos siguientes:
 
-​	La ventaja del "scripting" es poder dar solución en forma ordenada a **n** número de ecuaciones.
+```tex
+Autor : Marco Polo Jácome Toss	
+Fecha de creación :  12 de Septiembre del 2017
+Licencia : GNU General Public License (GPL) 3.0
+Plataforma : Scilab
+Código fuente creado para dar solución numérica a múltiples ecuaciones diferenciales.
+```
 
-## ¿Por qué utilizar este código fuente ?
+***Método de integración explicito***. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y) como ejemplo de un método de integración explicito se muestra en la siguiente imagen la regla del punto medio.
+$$
+y_{i+1}^{*}=y_{i}+hf(x_{i},y_{i})
+$$
 
-Debido a su simplicidad de resolver varias ecuaciones de estado, siendo flexible para dar solución a modelos de  máquinas eléctricas.
+$$
+y_{i+1}=y_{i}+\frac{h}{2}\left ( f(x_{i},y_{i})+f(x_{i}+h,y_{i+1}^{*}) \right )
+$$
+
+Donde 
+$$
+y_{i+1}^{*}=y_{i}+hf\left (x_{i},y_{i}  \right )
+$$
+
+$$
+y_{i+1}^{}=y_{i}+\frac{h}{2}\left ( f\left (x_{i},y_{i}  \right )+f\left (x_{i}+h,y_{i+1}^{*}  \right ) \right ),  0\leq i\leq n-1
+$$
+
+
+
+​	***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente imagen se muestra la forma implícita del método de integración del punto medio.
+
+$$
+y_{i+1}=y_{i}+hf\left ( x_{i} + \frac{h}{2}, \frac{y_{i}+y_{i+1}}{2} \right ), 0\leq i\leq n-1
+$$
+
+
+La ventaja del "scripting" es poder dar solución en forma ordenada a **n** número de ecuaciones diferenciales.
+
+
+
+## **Problemas de valor inicial** 
+
+Se considera el problema de valor inicial (PVI) de ecuaciones diferenciales ordinarias (EDO) :
+
+<center><img src="https://latex.codecogs.com/gif.latex?\left.\begin{matrix}&space;y^{'}=f(x,y(x)))\\&space;y\left&space;(&space;x_{0}&space;\right&space;)=y_{0}&space;\end{matrix}\right\}&space;y,f\in&space;\mathbb{R}^{m},x\in&space;\left&space;[&space;x_{0},x_{N}&space;\right]" title="\left.\begin{matrix} y^{'}=f(x,y(x)))\\ y\left ( x_{0} \right )=y_{0} \end{matrix}\right\} y,f\in \mathbb{R}^{m},x\in \left [ x_{0},x_{N} \right]" /></center>
+
+## **1.1 ¿Por qué utilizar este código fuente ?**
+
+Debido a su simplicidad de resolver varias ecuaciones de estado es flexible para dar solución a modelos de  máquinas eléctricas  como para otros tipos de modelos que dependan principalmente del tiempo por defecto o en caso contrario que no involucre esta variable.
+
+Las líneas de código siguientes pertenecen al archivo `start.sce` el cual contiene tres métodos de solución Rk4,Rk3 y Trapezoidal.
+
+```scilab
+getd .;
+op=input('Seleccione la forma de solucion : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : ')
+mnecudif(op)
+```
+
 
 ![GitHub Logo](https://image.ibb.co/jpL5qU/1.jpg)
 
+##  1.2 Lista de archivos dependientes ![VERSION](https://img.shields.io/badge/Scilab-6.0.2-lightgrey)
 
-##  Archivos 
+La siguiente lista de archivos dependientes muestra como se encuentra estructurado en forma general siempre se arranca toda la lista de archivos con "start.sce" por o tanto el resto de archivos es llamado para su implementación.
+
 1. Star
     * attributes.sci
     * ecuDif.sci
@@ -23,15 +77,19 @@ Debido a su simplicidad de resolver varias ecuaciones de estado, siendo flexible
     * mnecudif
 
 
-##  Ejecución
+##  1.3 Ejecución del código fuente
 
-De manera sencilla iniciamos el Start.sce 
+De manera sencilla iniciamos el Start.sce y se indica el tipo de método a ocupar en este caso se incluye también el método trapezoidal.
 
+```
 **Seleccione la forma de solución : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : **
+```
 
-##  Archivo : ecuDif.sci
 
-En el archivo ecuDif es necesario especificar las ecuaciones de estado, por lo que Xdot contiene dos ecuaciones de estado las cuales son impresas en los archivos rk4.sci y rk6.sci con el tiempo.
+
+##  1.4 Ecuaciones diferenciales : ecuDif.sci
+
+En el archivo ecuDif es necesario especificar las ecuaciones de estado, por lo que Xdot contiene dos ecuaciones de estado las cuales son impresas en los archivos rk4.sci y rk6.sci con el tiempo. En este archivo se introducen los valores necesarios de las ecuaciones de estado con sus variables de estado representados con  `Xdot`.
 ```scilab
 function [Xdot]=ecuDif(t,x)
   m=0.5;
@@ -45,7 +103,7 @@ function [Xdot]=ecuDif(t,x)
 endfunction
 ```
 
-##  Archivo : rk6.sci
+##  1.5 Método de Runge-Kutta 6to Orden : rk6.sci
 
 Siendo necesario cambiar la línea del archivo rk4 o rk6 que contiene  disp([t(i),r(1,i)',r(2,i)']) al incrementar las ecuaciones o únicamente al mostrar una al igual que las variables iniciames mostradas en el arhivo **attributes.sci**
 
@@ -74,7 +132,7 @@ end
 endfunction
 ```
 
-##  Archivo : rk4.sci
+##  1.6 Método de Runge Kuta 4to Orden : rk4.sci
 ```scilab
 function [t,r]=rk4(t0, tf, N, conIni)
     matrixSize= size(conIni,1)
@@ -97,7 +155,7 @@ end
 endfunction
 ```
 
-##  Archivo : rtrapezoidal.sci
+##  1.7 Método Trapezoidal : rtrapezoidal.sci
 
 ```scilab
 function [t,r]=rtrapezoidal(t0, tf, N, conIni)
@@ -119,13 +177,16 @@ end
 endfunction
 ```
 
-##  Archivo : attributes.sci
+##  1.8 Valores Iniciales de Simulación : attributes.sci
 
 El archivo contiene los atributos de a simulación y debe establecer el número de condiciones iniciales, las cuales dependen de las variables de estado a resolver y siendo necesario modificar la impresion disp() de los arhivos rk4 y rk6
-   * ti: tiempo inicial de simulación
-   * tf: tiempo final de simulación
-   * varIni: variables iniciales
-   * muestras: muestras, 
+- ti: tiempo inicial de simulación
+- tf: tiempo final de simulación
+- varIni: variables iniciales
+- muestras: muestras, 
+
+Los valores iniciales mostrados en la parte inferior son el tiempo inicial, tiempo final, valores iniciales para dos variables y el número de muestras.
+
 ```scilab   
 global ti tf varIni muestras    
 ti=0;
@@ -135,3 +196,62 @@ muestras=10000;
 
 ```
 
+##  Ejemplo #1 Ecuación del péndulo
+
+Un péndulo simple se define como una partícula de masa "m" suspendida de "O" por un hilo inextensible de longitud "L" y de masa despreciable
+
+De la segunda Ley de Newton y siendo la aceleración de la partícula hacia adentro de la trayectoria circular.
+$$
+ma_{n}=T-mg\cdot \cos \theta
+$$
+Siendo la aceleración de la partícula hacia adentro dada por 
+$$
+a_{n}=v^{2}/L
+$$
+La aceleración tangencial de la partícula
+$$
+a_{t}=dv/dt
+$$
+
+
+De la segunda Ley de Newton incluyendo la fricción.
+$$
+ml\ddot{\theta}=-mg\sin \theta -kl\dot{\theta}
+$$
+El valor de k (fricción) esta dado por :
+$$
+k=\frac{b}{mL}
+$$
+
+
+Las variables de estado son :
+$$
+x_{1}=\theta,  x_{2}=\frac{d\theta}{dt}
+$$
+Por lo tanto las ecuaciones de estado son las siguientes :
+$$
+\dot{x_{1}}=x_{2}
+$$
+
+$$
+\dot{x_{2}}=-\frac{g}{l}\sin x_{1} - \frac{k}{m}x_{2}
+$$
+
+Estableciendo la ecuaciones en el archivo  `ecuDif.sci` y valores correspondientes.
+
+```scilab
+function [Xdot]=ecuDif(t,x)
+  m=0.5;
+  b=0.1;
+  L=1.5;
+  g=9.81; 
+  k=b/(m*L);
+ Xdot=zeros(2,1); //#Xdot
+ Xdot(1,1)=x(2);
+ Xdot(2,1)=-(g/L)*sin(x(1))-(k/m)*x(2);
+endfunction
+```
+
+La imagen de salida de la simulación con los datos anteriores se muestra con `Xdot(1)` y `Xdot(2)` 
+
+![Simulacion No.1](https://i.ibb.co/DQwzZC4/2020-06-29-00-41-49.jpg)
