@@ -193,41 +193,36 @@ muestras=10000;
 Un péndulo simple se define como una partícula de masa "m" suspendida de "O" por un hilo inextensible de longitud "L" y de masa despreciable
 
 De la segunda Ley de Newton y siendo la aceleración de la partícula hacia adentro de la trayectoria circular.
-$$
-ma_{n}=T-mg\cdot \cos \theta
-$$
+
+<img src="https://latex.codecogs.com/gif.latex?ma_{n}=T-mg\cdot&space;\cos&space;\theta" title="ma_{n}=T-mg\cdot \cos \theta" />
+
 Siendo la aceleración de la partícula hacia adentro dada por 
-$$
-a_{n}=v^{2}/L
-$$
+
+<img src="https://latex.codecogs.com/gif.latex?a_{n}=v^{2}/L" title="a_{n}=v^{2}/L" />
+
 La aceleración tangencial de la partícula
-$$
-a_{t}=dv/dt
-$$
+
+<img src="https://latex.codecogs.com/gif.latex?a_{t}=dv/dt" title="a_{t}=dv/dt" />
 
 
 De la segunda Ley de Newton incluyendo la fricción.
-$$
-ml\ddot{\theta}=-mg\sin \theta -kl\dot{\theta}
-$$
+
+<img src="https://latex.codecogs.com/gif.latex?ml\ddot{\theta}=-mg\sin&space;\theta&space;-kl\dot{\theta}" title="ml\ddot{\theta}=-mg\sin \theta -kl\dot{\theta}" />
+
 El valor de k (fricción) esta dado por :
-$$
-k=\frac{b}{mL}
-$$
+
+<img src="https://latex.codecogs.com/gif.latex?k=\frac{b}{mL}" title="k=\frac{b}{mL}" />
 
 
 Las variables de estado son :
-$$
-x_{1}=\theta,  x_{2}=\frac{d\theta}{dt}
-$$
-Por lo tanto las ecuaciones de estado son las siguientes :
-$$
-\dot{x_{1}}=x_{2}
-$$
 
-$$
-\dot{x_{2}}=-\frac{g}{l}\sin x_{1} - \frac{k}{m}x_{2}
-$$
+<img src="https://latex.codecogs.com/gif.latex?x_{1}=\theta,&space;x_{2}=\frac{d\theta}{dt}" title="x_{1}=\theta, x_{2}=\frac{d\theta}{dt}" />
+
+Por lo tanto las ecuaciones de estado son las siguientes :
+
+<img src="https://latex.codecogs.com/gif.latex?\dot{x_{1}}=x_{2}" title="\dot{x_{1}}=x_{2}" />
+
+<img src="https://latex.codecogs.com/gif.latex?\dot{x_{2}}=-\frac{g}{l}\sin&space;x_{1}&space;-&space;\frac{k}{m}x_{2}" title="\dot{x_{2}}=-\frac{g}{l}\sin x_{1} - \frac{k}{m}x_{2}" />
 
 Estableciendo la ecuaciones en el archivo  `ecuDif.sci` y valores correspondientes.
 
