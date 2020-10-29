@@ -13,30 +13,22 @@ Código fuente creado para dar solución numérica a múltiples ecuaciones difer
 ```
 
 ***Método de integración explicito***. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y) como ejemplo de un método de integración explicito se muestra en la siguiente imagen la regla del punto medio.
-$$
-y_{i+1}^{*}=y_{i}+hf(x_{i},y_{i})
-$$
 
-$$
-y_{i+1}=y_{i}+\frac{h}{2}\left ( f(x_{i},y_{i})+f(x_{i}+h,y_{i+1}^{*}) \right )
-$$
+<img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{*}=y_{i}&plus;hf(x_{i},y_{i})" title="y_{i+1}^{*}=y_{i}+hf(x_{i},y_{i})" />
+
+<img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;\frac{h}{2}\left&space;(&space;f(x_{i},y_{i})&plus;f(x_{i}&plus;h,y_{i&plus;1}^{*})&space;\right&space;)" title="y_{i+1}=y_{i}+\frac{h}{2}\left ( f(x_{i},y_{i})+f(x_{i}+h,y_{i+1}^{*}) \right )" />
 
 Donde 
-$$
-y_{i+1}^{*}=y_{i}+hf\left (x_{i},y_{i}  \right )
-$$
 
-$$
-y_{i+1}^{}=y_{i}+\frac{h}{2}\left ( f\left (x_{i},y_{i}  \right )+f\left (x_{i}+h,y_{i+1}^{*}  \right ) \right ),  0\leq i\leq n-1
-$$
+<img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{*}=y_{i}&plus;hf\left&space;(x_{i},y_{i}&space;\right&space;)" title="y_{i+1}^{*}=y_{i}+hf\left (x_{i},y_{i} \right )" />
+
+<img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{}=y_{i}&plus;\frac{h}{2}\left&space;(&space;f\left&space;(x_{i},y_{i}&space;\right&space;)&plus;f\left&space;(x_{i}&plus;h,y_{i&plus;1}^{*}&space;\right&space;)&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}^{}=y_{i}+\frac{h}{2}\left ( f\left (x_{i},y_{i} \right )+f\left (x_{i}+h,y_{i+1}^{*} \right ) \right ), 0\leq i\leq n-1" />
 
 
 
 ​	***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente imagen se muestra la forma implícita del método de integración del punto medio.
 
-$$
-y_{i+1}=y_{i}+hf\left ( x_{i} + \frac{h}{2}, \frac{y_{i}+y_{i+1}}{2} \right ), 0\leq i\leq n-1
-$$
+<img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;hf\left&space;(&space;x_{i}&space;&plus;&space;\frac{h}{2},&space;\frac{y_{i}&plus;y_{i&plus;1}}{2}&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}=y_{i}+hf\left ( x_{i} + \frac{h}{2}, \frac{y_{i}+y_{i+1}}{2} \right ), 0\leq i\leq n-1" />
 
 
 La ventaja del "scripting" es poder dar solución en forma ordenada a **n** número de ecuaciones diferenciales.
