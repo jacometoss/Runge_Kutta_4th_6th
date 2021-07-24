@@ -185,7 +185,7 @@ varIni=[0.01, 0.02]; //Cambiar #Xdot
 muestras=10000;
 
 ```
-#  1.9 Opciones de solución: mnecudif.sci
+##  1.9 Opciones de solución: mnecudif.sci
 
 Las opciones mencionadas en la parte **1.1** pertenecen al código siguiente :
 
