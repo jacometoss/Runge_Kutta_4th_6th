@@ -281,7 +281,7 @@ La imagen de salida de la simulación con los datos anteriores se muestra con `X
 
 ## Copyright
 
-Copyright © 2021 en adelante, Marco Polo Jácome Toss (https://jacometoss.github.io/Runge_Kutta_4th_6th/).
+Copyright © 2017 en adelante, Marco Polo Jácome Toss (https://jacometoss.github.io/Runge_Kutta_4th_6th/).
 
 Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
 
