@@ -277,3 +277,15 @@ endfunction
 La imagen de salida de la simulación con los datos anteriores se muestra con `Xdot(1)` y `Xdot(2)` 
 
 ![Simulacion No.1](https://i.ibb.co/DQwzZC4/2020-06-29-00-41-49.jpg)
+
+
+## Copyright
+
+Copyright © 2021 en adelante, Marco Polo Jácome Toss (https://jacometoss.github.io/Runge_Kutta_4th_6th/).
+
+Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.
+
+Vea la información de Licencia de `RK4` para más detalle.
+
