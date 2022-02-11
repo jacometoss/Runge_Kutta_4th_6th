@@ -12,7 +12,7 @@ Código fuente creado para dar solución numérica a múltiples ecuaciones difer
 
 ***Método de integración explicito***. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y) como ejemplo de un método de integración explicito se muestra en la siguiente imagen la regla del punto medio.
 
-<img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{*}=y_{i}&plus;hf(x_{i},y_{i})" title="y_{i+1}^{*}=y_{i}+hf(x_{i},y_{i})" />
+$$y_{i&plus;1}^{*}=y_{i}&plus;hf(x_{i},y_{i})$$
 
 <img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;\frac{h}{2}\left&space;(&space;f(x_{i},y_{i})&plus;f(x_{i}&plus;h,y_{i&plus;1}^{*})&space;\right&space;)" title="y_{i+1}=y_{i}+\frac{h}{2}\left ( f(x_{i},y_{i})+f(x_{i}+h,y_{i+1}^{*}) \right )" />
 
