@@ -292,4 +292,4 @@ Este programa se distribuye con la esperanza de que sea útil pero sin ninguna g
 
 Vea la información de Licencia de `RK4` para más detalle.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" alt="GPL-3" style="zoom:10%;" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" alt="GPL-3" style="zoom:1%;" />
