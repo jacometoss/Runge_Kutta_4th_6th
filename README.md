@@ -291,5 +291,3 @@ Copyright © 2017 en adelante, Marco Polo Jácome Toss (https://jacometoss.githu
 Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.
 
 Vea la información de Licencia de `RK4` para más detalle.
-
-![GPL-3](https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg)
