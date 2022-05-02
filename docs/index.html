@@ -3,7 +3,7 @@
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
 
-<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
@@ -134,7 +134,7 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
 kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
@@ -282,55 +282,98 @@ span.cm-strikethrough { text-decoration: line-through; }
 }
 
 
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+/* cyrillic-ext */
+/* cyrillic */
+/* greek-ext */
+/* greek */
+/* vietnamese */
+/* latin-ext */
+/* latin */
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Source Sans Pro SemiBold'), local('SourceSansPro-SemiBold'), url('file:///C://Users//toss//AppData//Roaming//Typora/themes/vue/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdu.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}@import '';
+
 :root {
-    --side-bar-bg-color: #fafafa;
+    --side-bar-bg-color: #fff;
     --control-text-color: #777;
+    --font-sans-serif: 'Ubuntu', 'Source Sans Pro', sans-serif !important;
+    --font-monospace: 'Fira Code', 'Roboto Mono', monospace !important;
 }
 
-@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
-
-/* open-sans-regular - latin-ext_latin */
-  /* open-sans-italic - latin-ext_latin */
-    /* open-sans-700 - latin-ext_latin */
-    /* open-sans-700italic - latin-ext_latin */
-  html {
+html {
     font-size: 16px;
-    -webkit-font-smoothing: antialiased;
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.6;
+    font-family: var(--font-sans-serif);
+    color: #34495e;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6rem;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 #write {
     max-width: 860px;
-  	margin: 0 auto;
-  	padding: 30px;
-    padding-bottom: 100px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
 }
 
-@media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
+#write p {
+    line-height: 1.6rem;
+    word-spacing: .05rem;
 }
 
-@media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
+#write ol li {
+    padding-left: 0.5rem;
 }
 
 #write > ul:first-child,
-#write > ol:first-child{
+#write > ol:first-child {
     margin-top: 30px;
 }
 
-a {
-    color: #4183C4;
+body > *:first-child {
+    margin-top: 0 !important;
 }
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+a {
+    color: #42b983;
+    font-weight: 600;
+    padding: 0 2px;
+    text-decoration: none;
+}
+
 h1,
 h2,
 h3,
@@ -344,6 +387,7 @@ h6 {
     line-height: 1.4;
     cursor: text;
 }
+
 h1:hover a.anchor,
 h2:hover a.anchor,
 h3:hover a.anchor,
@@ -352,84 +396,89 @@ h5:hover a.anchor,
 h6:hover a.anchor {
     text-decoration: none;
 }
+
 h1 tt,
 h1 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h2 tt,
 h2 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h3 tt,
 h3 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h4 tt,
 h4 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h5 tt,
 h5 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
 h6 tt,
 h6 code {
-    font-size: inherit;
+    font-size: inherit !important;
 }
+
+h2 a,
+h3 a {
+    color: #34495e;
+}
+
 h1 {
-    font-size: 2.25em;
-    line-height: 1.2;
-    border-bottom: 1px solid #eee;
+    padding-bottom: .4rem;
+    font-size: 2.2rem;
+    line-height: 1.3;
 }
+
 h2 {
-    font-size: 1.75em;
+    font-size: 1.75rem;
     line-height: 1.225;
-    border-bottom: 1px solid #eee;
+    margin: 35px 0 15px;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid #ddd;
 }
-
-/*@media print {
-    .typora-export h1,
-    .typora-export h2 {
-        border-bottom: none;
-        padding-bottom: initial;
-    }
-
-    .typora-export h1::after,
-    .typora-export h2::after {
-        content: "";
-        display: block;
-        height: 100px;
-        margin-top: -96px;
-        border-top: 1px solid #eee;
-    }
-}*/
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.4rem;
     line-height: 1.43;
+    margin: 20px 0 7px;
 }
+
 h4 {
-    font-size: 1.25em;
+    font-size: 1.2rem;
 }
+
 h5 {
-    font-size: 1em;
+    font-size: 1rem;
 }
+
 h6 {
-   font-size: 1em;
+    font-size: 1rem;
     color: #777;
 }
+
 p,
 blockquote,
 ul,
 ol,
 dl,
-table{
+table {
     margin: 0.8em 0;
 }
-li>ol,
-li>ul {
+
+li > ol,
+li > ul {
     margin: 0 0;
 }
+
 hr {
     height: 2px;
     padding: 0;
@@ -440,118 +489,219 @@ hr {
     box-sizing: content-box;
 }
 
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
 li p.first {
     display: inline-block;
 }
+
 ul,
 ol {
     padding-left: 30px;
 }
+
 ul:first-child,
 ol:first-child {
     margin-top: 0;
 }
+
 ul:last-child,
 ol:last-child {
     margin-bottom: 0;
 }
+
 blockquote {
-    border-left: 4px solid #dfe2e5;
-    padding: 0 15px;
-    color: #777777;
+    border-left: 4px solid #42b983;
+    padding: 10px 15px;
+    color: #777;
+    background-color: rgba(66, 185, 131, .1);
 }
-blockquote blockquote {
-    padding-right: 0;
-}
+
 table {
     padding: 0;
     word-break: initial;
 }
+
 table tr {
-    border: 1px solid #dfe2e5;
+    border-top: 1px solid #dfe2e5;
     margin: 0;
     padding: 0;
 }
+
 table tr:nth-child(2n),
 thead {
-    background-color: #f8f8f8;
+    background-color: #fafafa;
 }
-table th {
+
+table tr th {
     font-weight: bold;
     border: 1px solid #dfe2e5;
     border-bottom: 0;
+    text-align: left;
     margin: 0;
     padding: 6px 13px;
 }
-table td {
+
+table tr td {
     border: 1px solid #dfe2e5;
+    text-align: left;
     margin: 0;
     padding: 6px 13px;
 }
-table th:first-child,
-table td:first-child {
+
+table tr th:first-child,
+table tr td:first-child {
     margin-top: 0;
 }
-table th:last-child,
-table td:last-child {
+
+table tr th:last-child,
+table tr td:last-child {
     margin-bottom: 0;
 }
 
-.CodeMirror-lines {
-    padding-left: 4px;
+#write strong {
+    padding: 0 1px;
 }
 
-.code-tooltip {
-    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
-    border-top: 1px solid #eef2f2;
+#write em {
+    padding: 0 5px 0 2px;
 }
 
-.md-fences,
-code,
-tt {
-    border: 1px solid #e7eaed;
+#write table thead th {
+    background-color: #f2f2f2;
+}
+
+#write .CodeMirror-gutters {
+    border-right: none;
+}
+
+#write .md-fences {
+    border: 1px solid #F4F4F4;
+    -webkit-font-smoothing: initial;
+    margin: 0.8rem 0 !important;
+    padding: 0.3rem 0 !important;
+    line-height: 1.43rem;
+    background-color: #F8F8F8 !important;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    font-size: 0.85rem;
+    word-wrap: normal;
+}
+
+#write .CodeMirror-wrap .CodeMirror-code pre {
+    padding-left: 12px;
+}
+
+#write code, tt {
+    padding: 2px 4px;
+    border-radius: 2px;
+    font-family: var(--font-monospace);
+    font-size: 0.92rem;
+    color: #e96900;
     background-color: #f8f8f8;
-    border-radius: 3px;
-    padding: 0;
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
 }
 
-code {
-    background-color: #f3f4f4;
-    padding: 0 2px 0 2px;
+tt {
+    margin: 0 2px;
 }
 
-.md-fences {
-    margin-bottom: 15px;
-    margin-top: 15px;
-    padding-top: 8px;
-    padding-bottom: 6px;
+#write .md-footnote {
+    background-color: #f8f8f8;
+    color: #e96900;
 }
 
+/* heighlight. */
+#write mark {
+    background-color: #EBFFEB;
+    border-radius: 2px;
+    padding: 2px 4px;
+    margin: 0 2px;
+    color: #222;
+    font-weight: 500;
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.cm-s-inner .cm-link,
+.cm-s-inner.cm-link {
+    color: #22a2c9;
+}
+
+.cm-s-inner .cm-string {
+    color: #22a2c9;
+}
 
 .md-task-list-item > input {
-  margin-left: -1.3em;
+    margin-left: -1.3em;
 }
 
 @media print {
     html {
         font-size: 13px;
     }
+
     table,
     pre {
         page-break-inside: avoid;
     }
+
     pre {
         word-wrap: break-word;
     }
 }
 
 .md-fences {
-	background-color: #f8f8f8;
+    background-color: #f8f8f8;
 }
+
+.md-diagram-panel {
+    position: static !important;
+}
+
 #write pre.md-meta-block {
-	padding: 1rem;
+    padding: 1rem;
     font-size: 85%;
     line-height: 1.45;
     background-color: #f7f7f7;
@@ -561,46 +711,45 @@ code {
     margin-top: 0 !important;
 }
 
-.mathjax-block>.code-tooltip {
-	bottom: .375rem;
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
 }
 
-.md-mathjax-midline {
-    background: #fafafa;
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
 }
 
-#write>h3.md-focus:before{
-	left: -1.5625rem;
-	top: .375rem;
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
 }
-#write>h4.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
 }
-#write>h5.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
 }
-#write>h6.md-focus:before{
-	left: -1.5625rem;
-	top: .285714286rem;
-}
-.md-image>.md-meta {
-    /*border: 1px solid #ddd;*/
+
+.md-image > .md-meta {
     border-radius: 3px;
-    padding: 2px 0px 0px 4px;
+    font-family: var(--font-monospace);
+    padding: 2px 0 0 4px;
     font-size: 0.9em;
     color: inherit;
 }
 
 .md-tag {
-    color: #a7a7a7;
-    opacity: 1;
+    color: inherit;
 }
 
-.md-toc { 
-    margin-top:20px;
-    padding-bottom:20px;
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .sidebar-tabs {
@@ -619,22 +768,29 @@ code {
     border-width: 1px;
 }
 
+#md-notification:before {
+    top: 10px;
+}
+
 /** focus mode */
+
 .on-focus-mode blockquote {
     border-left-color: rgba(85, 85, 85, 0.12);
 }
 
-header, .context-menu, .megamenu-content, footer{
-    font-family: "Segoe UI", "Arial", sans-serif;
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: var(--font-sans-serif);
 }
 
 .file-node-content:hover .file-node-icon,
-.file-node-content:hover .file-node-open-state{
+.file-node-content:hover .file-node-open-state {
     visibility: visible;
 }
 
 .mac-seamless-mode #typora-sidebar {
-    background-color: #fafafa;
     background-color: var(--side-bar-bg-color);
 }
 
@@ -642,41 +798,18 @@ header, .context-menu, .megamenu-content, footer{
     color: #b4654d;
 }
 
-/*.html-for-mac {
+.html-for-mac .context-menu {
     --item-hover-bg-color: #E6F0FE;
-}*/
-
-#md-notification .btn {
-    border: 0;
-}
-
-.dropdown-menu .divider {
-    border-color: #e5e5e5;
-    opacity: 0.4;
-}
-
-.ty-preferences .window-content {
-    background-color: #fafafa;
-}
-
-.ty-preferences .nav-group-item.active {
-    color: white;
-    background: #999;
-}
-
-.menu-item-container a.menu-style-btn {
-    background-color: #f5f8fa;
-    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
 }
 
 
 
-</style><title></title>
+</style><title>runge-kutta-4to-6to-orden</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='métodos-de-integración-runge-kutta--y-regla-trapezoidal'><strong><span>Métodos de integración Runge-Kutta  y Regla Trapezoidal</span></strong></h1><p><span>El método de Runge-Kutta (RK) es un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explicito. Para diferenciar los métodos de solución explicito e implicito  se agregan los dos puntos siguientes:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="tex"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="tex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" class="cm-tab-wrap-hack" style="padding-right: 0.1px;">Autor : Marco Polo Jácome Toss<span class="cm-tab" role="presentation" cm-text="	">  </span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Fecha de creación :  12 de Septiembre del 2017</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Licencia : GNU General Public License (GPL) 3.0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Plataforma : Scilab</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Código fuente creado para dar solución numérica a múltiples ecuaciones diferenciales.</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 115px;"></div><div class="CodeMirror-gutters" style="display: none; height: 115px;"></div></div></div></pre><p><em><strong><span>Método de integración explicito</span></strong></em><span>. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y) como ejemplo de un método de integración explicito se muestra en la siguiente imagen la regla del punto medio.</span></p><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{*}=y_{i}&plus;hf(x_{i},y_{i})" title="y_{i+1}^{*}=y_{i}+hf(x_{i},y_{i})" /></p><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;\frac{h}{2}\left&space;(&space;f(x_{i},y_{i})&plus;f(x_{i}&plus;h,y_{i&plus;1}^{*})&space;\right&space;)" title="y_{i+1}=y_{i}+\frac{h}{2}\left ( f(x_{i},y_{i})+f(x_{i}+h,y_{i+1}^{*}) \right )" /></p><p><span>Donde </span></p><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{*}=y_{i}&plus;hf\left&space;(x_{i},y_{i}&space;\right&space;)" title="y_{i+1}^{*}=y_{i}+hf\left (x_{i},y_{i} \right )" /></p><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{}=y_{i}&plus;\frac{h}{2}\left&space;(&space;f\left&space;(x_{i},y_{i}&space;\right&space;)&plus;f\left&space;(x_{i}&plus;h,y_{i&plus;1}^{*}&space;\right&space;)&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}^{}=y_{i}+\frac{h}{2}\left ( f\left (x_{i},y_{i} \right )+f\left (x_{i}+h,y_{i+1}^{*} \right ) \right ), 0\leq i\leq n-1" /></p><p>&nbsp;</p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.25px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente imagen se muestra la forma implícita del método de integración del punto medio.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 46px;"></div><div class="CodeMirror-gutters" style="display: none; height: 46px;"></div></div></div></pre><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;hf\left&space;(&space;x_{i}&space;&plus;&space;\frac{h}{2},&space;\frac{y_{i}&plus;y_{i&plus;1}}{2}&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}=y_{i}+hf\left ( x_{i} + \frac{h}{2}, \frac{y_{i}+y_{i+1}}{2} \right ), 0\leq i\leq n-1" /></p><p><span>La ventaja del &quot;scripting&quot; es poder dar solución en forma ordenada a </span><strong><span>n</span></strong><span> número de ecuaciones diferenciales.</span></p><p>&nbsp;</p><h2 id='problemas-de-valor-inicial'><strong><span>Problemas de valor inicial</span></strong><span> </span></h2><p><span>Se considera el problema de valor inicial (PVI) de ecuaciones diferenciales ordinarias (EDO) :</span></p><center><img src="https://latex.codecogs.com/gif.latex?\left.\begin{matrix}&amp;space;y^{'}=f(x,y(x)))\\&amp;space;y\left&amp;space;(&amp;space;x_{0}&amp;space;\right&amp;space;)=y_{0}&amp;space;\end{matrix}\right\}&amp;space;y,f\in&amp;space;\mathbb{R}^{m},x\in&amp;space;\left&amp;space;[&amp;space;x_{0},x_{N}&amp;space;\right]" title="\left.\begin{matrix} y^{'}=f(x,y(x)))\\ y\left ( x_{0} \right )=y_{0} \end{matrix}\right\} y,f\in \mathbb{R}^{m},x\in \left [ x_{0},x_{N} \right]"></center><h2 id='11-¿por-qué-utilizar-este-código-fuente-'><strong><span>1.1 ¿Por qué utilizar este código fuente ?</span></strong></h2><p><span>Debido a su simplicidad de resolver varias ecuaciones de estado es flexible para dar solución a modelos de  máquinas eléctricas  como para otros tipos de modelos que dependan principalmente del tiempo por defecto o en caso contrario que no involucre esta variable.</span></p><p><span>Las líneas de código siguientes pertenecen al archivo </span><code>start.sce</code><span> el cual contiene tres métodos de solución Rk4,Rk3 y Trapezoidal.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">getd .;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">op=input('Seleccione la forma de solucion : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : ')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">mnecudif(op)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 69px;"></div><div class="CodeMirror-gutters" style="display: none; height: 69px;"></div></div></div></pre><p><img src="https://image.ibb.co/jpL5qU/1.jpg" referrerpolicy="no-referrer" alt="GitHub Logo"></p><h2 id='12-lista-de-archivos-dependientes'><span>1.2 Lista de archivos dependientes </span><img src="https://img.shields.io/badge/Scilab-6.0.2-lightgrey" referrerpolicy="no-referrer" alt="VERSION"></h2><p><span>La siguiente lista de archivos dependientes muestra como se encuentra estructurado en forma general siempre se arranca toda la lista de archivos con &quot;start.sce&quot; por o tanto el resto de archivos es llamado para su implementación.</span></p><ol start='' ><li><p><span>Star</span></p><ul><li><span>attributes.sci</span></li><li><span>ecuDif.sci</span></li><li><span>rk4.sci (Multi ecuaciones)</span></li><li><span>rk6.sci (Multi ecuaciones)</span></li><li><span>rtrapezoidal (Multi ecuaciones) </span></li><li><span>mnecudif</span></li></ul></li></ol><h2 id='13-ejecución-del-código-fuente'><span>1.3 Ejecución del código fuente</span></h2><p><span>De manera sencilla iniciamos el Start.sce y se indica el tipo de método a ocupar en este caso se incluye también el método trapezoidal.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">**Seleccione la forma de solución : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : **</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 23px;"></div><div class="CodeMirror-gutters" style="display: none; height: 23px;"></div></div></div></pre><p>&nbsp;</p><h2 id='14-ecuaciones-diferenciales--ecudifsci'><span>1.4 Ecuaciones diferenciales : ecuDif.sci</span></h2><p><span>En el archivo ecuDif es necesario especificar las ecuaciones de estado, por lo que Xdot contiene dos ecuaciones de estado las cuales son impresas en los archivos rk4.sci y rk6.sci con el tiempo. En este archivo se introducen los valores necesarios de las ecuaciones de estado con sus variables de estado representados con  </span><code>Xdot</code><span>.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [Xdot]=ecuDif(t,x)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  m=0.5;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  b=0.1;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  L=0.5;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  g=9.81;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  k=b/(m*L);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot=zeros(2,1); //#Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot(1,1)=x(2);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot(2,1)=-(g/L)*sin(x(1))-(k/m)*x(2);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 230px;"></div><div class="CodeMirror-gutters" style="display: none; height: 230px;"></div></div></div></pre><h2 id='15-método-de-runge-kutta-6to-orden--rk6sci'><span>1.5 Método de Runge-Kutta 6to Orden : rk6.sci</span></h2><p><span>Siendo necesario cambiar la línea del archivo rk4 o rk6 que contiene  disp([t(i),r(1,i)&#39;,r(2,i)&#39;]) al incrementar las ecuaciones o únicamente al mostrar una al igual que las variables iniciames mostradas en el arhivo </span><strong><span>attributes.sci</span></strong></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [t,r]=rk6(t0, tf, N, conIni)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  matrixSize= size(conIni,1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  if  (matrixSize==1) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  conIni=conIni';</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">h=(tf-t0)/N; //Paso</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">t(1) = t0;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">r(:,1) = conIni; //Condiciones Iniciales</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for i = 1:N  //Seccion Modificable para matriz</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; disp([t(i),r(1,i)',r(2,i)']) // Cambiar #Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k1 = h*ecuDif(t(i), r(:,i));</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k2 = h*ecuDif(t(i)+h, r(:,i)+k1);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k3 = h*ecuDif(t(i)+h/2, r(:,i)+(3*k1+k2)/8); &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k4 = h*ecuDif(t(i)+(2*h)/3, r(:,i)+(8*k1+2*k2+8*k3)/27); </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k5 = h*ecuDif(t(i)+((7-sqrt(21))*h)/14,r(:,i)+((3*k1*(3*sqrt(21)-7))-(8*k2*(7-sqrt(21)))+(48*k3*(7-sqrt(21)))-(3*k4*(21-sqrt(21))))/392);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k6 = h*ecuDif(t(i)+(7+sqrt(21))*h/14, r(:,i)+(-5*k1*(231+51*sqrt(21))-40*k2*(7+sqrt(21))-320*k3*sqrt(21)+3*k4*(21+121*sqrt(21))+392*k5*(6+sqrt(21)))/1960); </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; r(:,i+1) = r(:,i)+(15*k1*(22+7*sqrt(21))+120*k2+40*k3*(7*sqrt(21)-5)-63*k4*(3*sqrt(21)-2)-14*k5*(49+9*sqrt(21))+70*k6*(7-sqrt(21)))/180;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; t(i +1) = t0 + i*h;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r']; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 552px;"></div><div class="CodeMirror-gutters" style="display: none; height: 552px;"></div></div></div></pre><h2 id='16-método-de-runge-kuta-4to-orden--rk4sci'><span>1.6 Método de Runge Kuta 4to Orden : rk4.sci</span></h2><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [t,r]=rk4(t0, tf, N, conIni)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  matrixSize= size(conIni,1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  if  (matrixSize==1) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  conIni=conIni';</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">h=(tf-t0)/N; //Paso</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">t(1) = t0;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">r(:,1) = conIni; //Condiciones Iniciales</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for i = 1:N  //Seccion Modificable para matriz</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; disp([t(i),r(1,i)',r(2,i)']) //Cambiar #Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k1 = h*ecuDif(t(i), r(:,i));</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k2 = h*ecuDif(t(i)+h/2, r(:,i)+0.5*k1);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k3 = h*ecuDif(t(i)+h/2, r(:,i)+0.5*k2); </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k4 = h*ecuDif(t(i)+h, r(:,i)+k3);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; r(:,i+1) = r(:,i) + (k1 + 2*k2 + 2*k3 + k4)/6;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; t(i +1) = t0 + i*h;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r']; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 437px;"></div><div class="CodeMirror-gutters" style="display: none; height: 437px;"></div></div></div></pre><h2 id='17-método-trapezoidal--rtrapezoidalsci'><span>1.7 Método Trapezoidal : rtrapezoidal.sci</span></h2><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [t,r]=rtrapezoidal(t0, tf, N, conIni)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  matrixSize= size(conIni,1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  if  (matrixSize==1) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  conIni=conIni';</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">h=(tf-t0)/N; //Paso</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">t(1) = t0;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">r(:,1) = conIni; //Condiciones Iniciales</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for i = 1:N  //Seccion Modificable para matriz</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; disp([t(i),r(1,i)',r(2,i)']) //Cambiar #Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; y1 = r(:,i)+h*ecuDif(t(i), r(:,i));</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; y2 = r(:,i)+(h/2)*((ecuDif(t(i), r(:,i)))+(ecuDif(t(i)+h, y1)));</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; r(:,i+1) = y2;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; t(i +1) = t0 + i*h;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r']; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 391px;"></div><div class="CodeMirror-gutters" style="display: none; height: 391px;"></div></div></div></pre><h2 id='18-valores-iniciales-de-simulación--attributessci'><span>1.8 Valores Iniciales de Simulación : attributes.sci</span></h2><p><span>El archivo contiene los atributos de a simulación y debe establecer el número de condiciones iniciales, las cuales dependen de las variables de estado a resolver y siendo necesario modificar la impresion disp() de los arhivos rk4 y rk6</span></p><ul><li><span>ti: tiempo inicial de simulación</span></li><li><span>tf: tiempo final de simulación</span></li><li><span>varIni: variables iniciales</span></li><li><span>muestras: muestras, </span></li></ul><p><span>Los valores iniciales mostrados en la parte inferior son el tiempo inicial, tiempo final, valores iniciales para dos variables y el número de muestras.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab   "><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab   "><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">global ti tf varIni muestras &nbsp; &nbsp;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ti=0;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">tf=10;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">varIni=[0.01, 0.02]; //Cambiar #Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">muestras=10000;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
-</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 138px;"></div><div class="CodeMirror-gutters" style="display: none; height: 138px;"></div></div></div></pre><h2 id='19-opciones-de-solución-mnecudifsci'><span>1.9 Opciones de solución: mnecudif.sci</span></h2><p><span>Las opciones mencionadas en la parte </span><strong><span>1.1</span></strong><span> pertenecen al código siguiente :</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab   " style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab   "><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
-</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function mnecudif(alg)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">if(alg == 1) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r]=rk4(ti,tf,muestras,varIni);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">plot(t,[r(1,:)',r(2,:)'])</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">legend('Xdot(1)','Xdot(2)')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">xlabel('tiempo, seg')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ylabel('Y')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">title('Solución Runge Kutta orden 4')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">xgrid</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">elseif ( alg == 2) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r]=rk6(ti,tf,muestras,varIni);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">plot(t,[r(1,:)',r(2,:)'])</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">legend('Xdot(1)','Xdot(2)')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">xlabel('tiempo, seg')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ylabel('Ysol')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">title('Solución Runge Kutta orden 6')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">xgrid</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">elseif (alg == 3) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r]=rtrapezoidal(ti,tf,muestras,varIni);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">plot(t,[r(1,:)',r(2,:)'])</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">legend('Xdot(1)','Xdot(2)')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">xlabel('tiempo, seg')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ylabel('Y')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">title('Solución Regla Trapezoidal Explicita')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">xgrid</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">else</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">disp('Error: Seleccione un método de solución ');</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
-</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 713px;"></div><div class="CodeMirror-gutters" style="display: none; height: 713px;"></div></div></div></pre><h2 id='ejemplo-1-ecuación-del-péndulo'><span>Ejemplo #1 Ecuación del péndulo</span></h2><p><span>Un péndulo simple se define como una partícula de masa &quot;m&quot; suspendida de &quot;O&quot; por un hilo inextensible de longitud &quot;L&quot; y de masa despreciable</span></p><p><span>De la segunda Ley de Newton y siendo la aceleración de la partícula hacia adentro de la trayectoria circular.</span></p><p><img src="https://latex.codecogs.com/gif.latex?ma_{n}=T-mg\cdot&space;\cos&space;\theta" title="ma_{n}=T-mg\cdot \cos \theta" /></p><p><span>Siendo la aceleración de la partícula hacia adentro dada por </span></p><p><img src="https://latex.codecogs.com/gif.latex?a_{n}=v^{2}/L" title="a_{n}=v^{2}/L" /></p><p><span>La aceleración tangencial de la partícula</span></p><p><img src="https://latex.codecogs.com/gif.latex?a_{t}=dv/dt" title="a_{t}=dv/dt" /></p><p><span>De la segunda Ley de Newton incluyendo la fricción.</span></p><p><img src="https://latex.codecogs.com/gif.latex?ml\ddot{\theta}=-mg\sin&space;\theta&space;-kl\dot{\theta}" title="ml\ddot{\theta}=-mg\sin \theta -kl\dot{\theta}" /></p><p><span>El valor de k (fricción) esta dado por :</span></p><p><img src="https://latex.codecogs.com/gif.latex?k=\frac{b}{mL}" title="k=\frac{b}{mL}" /></p><p><span>Las variables de estado son :</span></p><p><img src="https://latex.codecogs.com/gif.latex?x_{1}=\theta,&space;x_{2}=\frac{d\theta}{dt}" title="x_{1}=\theta, x_{2}=\frac{d\theta}{dt}" /></p><p><span>Por lo tanto las ecuaciones de estado son las siguientes :</span></p><p><img src="https://latex.codecogs.com/gif.latex?\dot{x_{1}}=x_{2}" title="\dot{x_{1}}=x_{2}" /></p><p><img src="https://latex.codecogs.com/gif.latex?\dot{x_{2}}=-\frac{g}{l}\sin&space;x_{1}&space;-&space;\frac{k}{m}x_{2}" title="\dot{x_{2}}=-\frac{g}{l}\sin x_{1} - \frac{k}{m}x_{2}" /></p><p><span>Estableciendo la ecuaciones en el archivo  </span><code>ecuDif.sci</code><span> y valores correspondientes.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.5px; left: 8px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [Xdot]=ecuDif(t,x)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  m=0.5;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  b=0.1;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  L=1.5;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  g=9.81; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  k=b/(m*L);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot=zeros(2,1); //#Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot(1,1)=x(2);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot(2,1)=-(g/L)*sin(x(1))-(k/m)*x(2);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 230px;"></div><div class="CodeMirror-gutters" style="display: none; height: 230px;"></div></div></div></pre><p><span>La imagen de salida de la simulación con los datos anteriores se muestra con </span><code>Xdot(1)</code><span> y </span><code>Xdot(2)</code><span> </span></p><p><img src="https://i.ibb.co/DQwzZC4/2020-06-29-00-41-49.jpg" referrerpolicy="no-referrer" alt="Simulacion No.1"></p><h2 id='copyright'><span>Copyright</span></h2><p><span>Copyright © 2017 en adelante, Marco Polo Jácome Toss (</span><a href='https://jacometoss.github.io/Runge_Kutta_4th_6th/' target='_blank' class='url'>https://jacometoss.github.io/Runge_Kutta_4th_6th/</a><span>).</span></p><p><span>Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.</span></p><p><span>Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.</span></p><p><span>Vea la información de Licencia de </span><code>RK4</code><span> para más detalle.</span></p></div></div>
+<div id='write'  class=''><h1 id='métodos-de-integración-runge-kutta--y-regla-trapezoidal'><strong><span>Métodos de integración Runge-Kutta  y Regla Trapezoidal</span></strong></h1><p><span>El método de Runge-Kutta (RK) es un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explicito. Para diferenciar los métodos de solución explicito e implícito  se agregan los dos puntos siguientes:</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="tex"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="tex"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 10px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" class="cm-tab-wrap-hack" style="padding-right: 0.1px;">Autor : Marco Polo Jácome Toss<span class="cm-tab" role="presentation" cm-text="	">  </span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Fecha de creación :  12 de Septiembre del 2017</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Licencia : GNU General Public License (GPL) 3.0</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Plataforma : Scilab</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">Código fuente creado para dar solución numérica a múltiples ecuaciones diferenciales.</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 114px;"></div><div class="CodeMirror-gutters" style="display: none; height: 114px;"></div></div></div></pre><p><em><strong><span>Método de integración explicito</span></strong></em><span>. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y) como ejemplo de un método de integración explicito se muestra en la siguiente imagen la regla del punto medio.</span></p><p>&nbsp;</p><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{*}=y_{i}&plus;hf(x_{i},y_{i})" title="y_{i&plus;1}^{*}=y_{i}&plus;hf(x_{i},y_{i})" /></p><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;\frac{h}{2}\left&space;(&space;f(x_{i},y_{i})&plus;f(x_{i}&plus;h,y_{i&plus;1}^{*})&space;\right&space;)" title="y_{i+1}=y_{i}+\frac{h}{2}\left ( f(x_{i},y_{i})+f(x_{i}+h,y_{i+1}^{*}) \right )" /></p><p><span>Donde </span></p><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{*}=y_{i}&plus;hf\left&space;(x_{i},y_{i}&space;\right&space;)" title="y_{i+1}^{*}=y_{i}+hf\left (x_{i},y_{i} \right )" /></p><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}^{}=y_{i}&plus;\frac{h}{2}\left&space;(&space;f\left&space;(x_{i},y_{i}&space;\right&space;)&plus;f\left&space;(x_{i}&plus;h,y_{i&plus;1}^{*}&space;\right&space;)&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}^{}=y_{i}+\frac{h}{2}\left ( f\left (x_{i},y_{i} \right )+f\left (x_{i}+h,y_{i+1}^{*} \right ) \right ), 0\leq i\leq n-1" /></p><p>&nbsp;</p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente imagen se muestra la forma implícita del método de integración del punto medio.</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 67px;"></div><div class="CodeMirror-gutters" style="display: none; height: 67px;"></div></div></div></pre><p><img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;hf\left&space;(&space;x_{i}&space;&plus;&space;\frac{h}{2},&space;\frac{y_{i}&plus;y_{i&plus;1}}{2}&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}=y_{i}+hf\left ( x_{i} + \frac{h}{2}, \frac{y_{i}+y_{i+1}}{2} \right ), 0\leq i\leq n-1" /></p><p><span>La ventaja del &quot;scripting&quot; es poder dar solución en forma ordenada a </span><strong><span>n</span></strong><span> número de ecuaciones diferenciales.</span></p><p>&nbsp;</p><h2 id='problemas-de-valor-inicial'><strong><span>Problemas de valor inicial</span></strong><span> </span></h2><p><span>Se considera el problema de valor inicial (PVI) de ecuaciones diferenciales ordinarias (EDO) :</span></p><center><img src="https://latex.codecogs.com/gif.latex?\left.\begin{matrix}&amp;space;y^{'}=f(x,y(x)))\\&amp;space;y\left&amp;space;(&amp;space;x_{0}&amp;space;\right&amp;space;)=y_{0}&amp;space;\end{matrix}\right\}&amp;space;y,f\in&amp;space;\mathbb{R}^{m},x\in&amp;space;\left&amp;space;[&amp;space;x_{0},x_{N}&amp;space;\right]" title="\left.\begin{matrix} y^{'}=f(x,y(x)))\\ y\left ( x_{0} \right )=y_{0} \end{matrix}\right\} y,f\in \mathbb{R}^{m},x\in \left [ x_{0},x_{N} \right]"></center><h2 id='11-¿por-qué-utilizar-este-código-fuente-'><strong><span>1.1 ¿Por qué utilizar este código fuente ?</span></strong></h2><p><span>Debido a su simplicidad de resolver varias ecuaciones de estado es flexible para dar solución a modelos de  máquinas eléctricas  como para otros tipos de modelos que dependan principalmente del tiempo o en caso contrario que no involucre esta variable.</span></p><p><span>Las líneas de código siguientes pertenecen al archivo </span><code>start.sce</code><span> el cual contiene tres métodos de solución Rk4,Rk3 y Trapezoidal.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">getd .;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">op=input('Seleccione la forma de solucion : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : ')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">mnecudif(op)</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 67px;"></div><div class="CodeMirror-gutters" style="display: none; height: 67px;"></div></div></div></pre><p><img src="https://image.ibb.co/jpL5qU/1.jpg" referrerpolicy="no-referrer" alt="GitHub Logo"></p><h2 id='12-lista-de-archivos-dependientes'><span>1.2 Lista de archivos dependientes </span><img src="https://img.shields.io/badge/Scilab-6.0.2-lightgrey" referrerpolicy="no-referrer" alt="VERSION"></h2><p><span>La siguiente lista de archivos dependientes muestra como se encuentra estructurado en forma general siempre se arranca toda la lista de archivos con &quot;start.sce&quot; por o tanto el resto de archivos es llamado para su implementación.</span></p><ol start='' ><li><p><span>Star</span></p><ul><li><span>attributes.sci</span></li><li><span>ecuDif.sci</span></li><li><span>rk4.sci (Multi ecuaciones)</span></li><li><span>rk6.sci (Multi ecuaciones)</span></li><li><span>rtrapezoidal (Multi ecuaciones) </span></li><li><span>mnecudif</span></li></ul></li></ol><h2 id='13-ejecución-del-código-fuente'><span>1.3 Ejecución del código fuente</span></h2><p><span>De manera sencilla iniciamos el </span><em><span>Start.sce</span></em><span> y se indica el tipo de método a ocupar en este caso se incluye también el método trapezoidal.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded md-focus" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap CodeMirror-focused" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 493.525px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">**Seleccione la forma de solución : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : **</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 22px;"></div><div class="CodeMirror-gutters" style="display: none; height: 22px;"></div></div></div></pre><p>&nbsp;</p><h2 id='14-ecuaciones-diferenciales--ecudifsci'><span>1.4 Ecuaciones diferenciales : ecuDif.sci</span></h2><p><span>En el archivo ecuDif es necesario especificar las ecuaciones de estado, por lo que Xdot contiene dos ecuaciones de estado las cuales son impresas en los archivos rk4.sci y rk6.sci con el tiempo. En este archivo se introducen los valores necesarios de las ecuaciones de estado con sus variables de estado representados con  </span><code>Xdot</code><span>.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [Xdot]=ecuDif(t,x)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  m=0.5;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  b=0.1;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  L=0.5;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  g=9.81;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  k=b/(m*L);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot=zeros(2,1); //#Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot(1,1)=x(2);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot(2,1)=-(g/L)*sin(x(1))-(k/m)*x(2);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 224px;"></div><div class="CodeMirror-gutters" style="display: none; height: 224px;"></div></div></div></pre><h2 id='15-método-de-runge-kutta-6to-orden--rk6sci'><span>1.5 Método de Runge-Kutta 6to Orden : rk6.sci</span></h2><p><span>Siendo necesario cambiar la línea del archivo rk4 o rk6 que contiene  disp([t(i),r(1,i)&#39;,r(2,i)&#39;]) al incrementar las ecuaciones o únicamente al mostrar una al igual que las variables iniciames mostradas en el arhivo </span><strong><span>attributes.sci</span></strong></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [t,r]=rk6(t0, tf, N, conIni)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  matrixSize= size(conIni,1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  if  (matrixSize==1) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  conIni=conIni';</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">h=(tf-t0)/N; //Paso</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">t(1) = t0;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">r(:,1) = conIni; //Condiciones Iniciales</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for i = 1:N  //Seccion Modificable para matriz</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; disp([t(i),r(1,i)',r(2,i)']) // Cambiar #Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k1 = h*ecuDif(t(i), r(:,i));</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k2 = h*ecuDif(t(i)+h, r(:,i)+k1);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k3 = h*ecuDif(t(i)+h/2, r(:,i)+(3*k1+k2)/8); &nbsp;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k4 = h*ecuDif(t(i)+(2*h)/3, r(:,i)+(8*k1+2*k2+8*k3)/27); </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k5 = h*ecuDif(t(i)+((7-sqrt(21))*h)/14,r(:,i)+((3*k1*(3*sqrt(21)-7))-(8*k2*(7-sqrt(21)))+(48*k3*(7-sqrt(21)))-(3*k4*(21-sqrt(21))))/392);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k6 = h*ecuDif(t(i)+(7+sqrt(21))*h/14, r(:,i)+(-5*k1*(231+51*sqrt(21))-40*k2*(7+sqrt(21))-320*k3*sqrt(21)+3*k4*(21+121*sqrt(21))+392*k5*(6+sqrt(21)))/1960); </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; r(:,i+1) = r(:,i)+(15*k1*(22+7*sqrt(21))+120*k2+40*k3*(7*sqrt(21)-5)-63*k4*(3*sqrt(21)-2)-14*k5*(49+9*sqrt(21))+70*k6*(7-sqrt(21)))/180;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; t(i +1) = t0 + i*h;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r']; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 538px;"></div><div class="CodeMirror-gutters" style="display: none; height: 538px;"></div></div></div></pre><h2 id='16-método-de-runge-kuta-4to-orden--rk4sci'><span>1.6 Método de Runge Kuta 4to Orden : rk4.sci</span></h2><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [t,r]=rk4(t0, tf, N, conIni)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  matrixSize= size(conIni,1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  if  (matrixSize==1) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  conIni=conIni';</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">h=(tf-t0)/N; //Paso</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">t(1) = t0;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">r(:,1) = conIni; //Condiciones Iniciales</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for i = 1:N  //Seccion Modificable para matriz</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; disp([t(i),r(1,i)',r(2,i)']) //Cambiar #Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k1 = h*ecuDif(t(i), r(:,i));</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k2 = h*ecuDif(t(i)+h/2, r(:,i)+0.5*k1);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k3 = h*ecuDif(t(i)+h/2, r(:,i)+0.5*k2); </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; k4 = h*ecuDif(t(i)+h, r(:,i)+k3);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; r(:,i+1) = r(:,i) + (k1 + 2*k2 + 2*k3 + k4)/6;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; t(i +1) = t0 + i*h;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r']; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 426px;"></div><div class="CodeMirror-gutters" style="display: none; height: 426px;"></div></div></div></pre><h2 id='17-método-trapezoidal--rtrapezoidalsci'><span>1.7 Método Trapezoidal : rtrapezoidal.sci</span></h2><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab" style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [t,r]=rtrapezoidal(t0, tf, N, conIni)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  matrixSize= size(conIni,1)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  if  (matrixSize==1) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp;  conIni=conIni';</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">h=(tf-t0)/N; //Paso</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">t(1) = t0;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">r(:,1) = conIni; //Condiciones Iniciales</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">for i = 1:N  //Seccion Modificable para matriz</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; disp([t(i),r(1,i)',r(2,i)']) //Cambiar #Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; y1 = r(:,i)+h*ecuDif(t(i), r(:,i));</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; y2 = r(:,i)+(h/2)*((ecuDif(t(i), r(:,i)))+(ecuDif(t(i)+h, y1)));</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; r(:,i+1) = y2;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; t(i +1) = t0 + i*h;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">[t,r']; &nbsp; &nbsp; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 381px;"></div><div class="CodeMirror-gutters" style="display: none; height: 381px;"></div></div></div></pre><h2 id='18-valores-iniciales-de-simulación--attributessci'><span>1.8 Valores Iniciales de Simulación : attributes.sci</span></h2><p><span>El archivo contiene los atributos de a simulación y debe establecer el número de condiciones iniciales, las cuales dependen de las variables de estado a resolver y siendo necesario modificar la impresion disp() de los arhivos rk4 y rk6</span></p><ul><li><span>ti: tiempo inicial de simulación</span></li><li><span>tf: tiempo final de simulación</span></li><li><span>varIni: variables iniciales</span></li><li><span>muestras: muestras, </span></li></ul><p><span>Los valores iniciales mostrados en la parte inferior son el tiempo inicial, tiempo final, valores iniciales para dos variables y el número de muestras.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab   "><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab   "><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">global ti tf varIni muestras &nbsp; &nbsp;</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ti=0;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">tf=10;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">varIni=[0.01, 0.02]; //Cambiar #Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">muestras=10000;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 134px;"></div><div class="CodeMirror-gutters" style="display: none; height: 134px;"></div></div></div></pre><h2 id='19-opciones-de-solución-mnecudifsci'><span>1.9 Opciones de solución: mnecudif.sci</span></h2><p><span>Las opciones mencionadas en la parte </span><strong><span>1.1</span></strong><span> pertenecen al código siguiente :</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab   " style="break-inside: unset;"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab   "><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function mnecudif(alg)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; if(alg == 1) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  [t,r]=rk4(ti,tf,muestras,varIni);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  plot(t,[r(1,:)',r(2,:)'])</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  legend('Xdot(1)','Xdot(2)')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  xlabel('tiempo, seg')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ylabel('Y')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  title('Solución Runge Kutta orden 4')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  xgrid</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  elseif ( alg == 2) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  [t,r]=rk6(ti,tf,muestras,varIni);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  plot(t,[r(1,:)',r(2,:)'])</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  legend('Xdot(1)','Xdot(2)')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  xlabel('tiempo, seg')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ylabel('Ysol')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  title('Solución Runge Kutta orden 6')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  xgrid</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  elseif (alg == 3) then</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  [t,r]=rtrapezoidal(ti,tf,muestras,varIni);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  plot(t,[r(1,:)',r(2,:)'])</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  legend('Xdot(1)','Xdot(2)')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  xlabel('tiempo, seg')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  ylabel('Y')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  title('Solución Regla Trapezoidal Explicita')</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  xgrid</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; else</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;  disp('Error: Seleccione un método de solución ');</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; end</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" cm-zwsp="">
+</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 694px;"></div><div class="CodeMirror-gutters" style="display: none; height: 694px;"></div></div></div></pre><h2 id='ejemplo-1-ecuación-del-péndulo'><span>Ejemplo #1 Ecuación del péndulo</span></h2><p><span>Un péndulo simple se define como una partícula de masa &quot;m&quot; suspendida de &quot;O&quot; por un hilo inextensible de longitud &quot;L&quot; y de masa despreciable</span></p><p><span>De la segunda Ley de Newton y siendo la aceleración de la partícula hacia adentro de la trayectoria circular.</span></p><p><img src="https://latex.codecogs.com/gif.latex?ma_{n}=T-mg\cdot&space;\cos&space;\theta" title="ma_{n}=T-mg\cdot \cos \theta" /></p><p><span>Siendo la aceleración de la partícula hacia adentro dada por </span></p><p><img src="https://latex.codecogs.com/gif.latex?a_{n}=v^{2}/L" title="a_{n}=v^{2}/L" /></p><p><span>La aceleración tangencial de la partícula</span></p><p><img src="https://latex.codecogs.com/gif.latex?a_{t}=dv/dt" title="a_{t}=dv/dt" /></p><p><span>De la segunda Ley de Newton incluyendo la fricción.</span></p><p><img src="https://latex.codecogs.com/gif.latex?ml\ddot{\theta}=-mg\sin&space;\theta&space;-kl\dot{\theta}" title="ml\ddot{\theta}=-mg\sin \theta -kl\dot{\theta}" /></p><p><span>El valor de k (fricción) esta dado por :</span></p><p><img src="https://latex.codecogs.com/gif.latex?k=\frac{b}{mL}" title="k=\frac{b}{mL}" /></p><p><span>Las variables de estado son :</span></p><p><img src="https://latex.codecogs.com/gif.latex?x_{1}=\theta,&space;x_{2}=\frac{d\theta}{dt}" title="x_{1}=\theta, x_{2}=\frac{d\theta}{dt}" /></p><p><span>Por lo tanto las ecuaciones de estado son las siguientes :</span></p><p><img src="https://latex.codecogs.com/gif.latex?\dot{x_{1}}=x_{2}" title="\dot{x_{1}}=x_{2}" /></p><p><img src="https://latex.codecogs.com/gif.latex?\dot{x_{2}}=-\frac{g}{l}\sin&space;x_{1}&space;-&space;\frac{k}{m}x_{2}" title="\dot{x_{2}}=-\frac{g}{l}\sin x_{1} - \frac{k}{m}x_{2}" /></p><p><span>Estableciendo la ecuaciones en el archivo  </span><code>ecuDif.sci</code><span> y valores correspondientes.</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang="scilab"><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang="scilab"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 9.2px; left: 12px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation" style=""><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">function [Xdot]=ecuDif(t,x)</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  m=0.5;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  b=0.1;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  L=1.5;</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  g=9.81; </span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">  k=b/(m*L);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot=zeros(2,1); //#Xdot</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot(1,1)=x(2);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> Xdot(2,1)=-(g/L)*sin(x(1))-(k/m)*x(2);</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">endfunction</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 224px;"></div><div class="CodeMirror-gutters" style="display: none; height: 224px;"></div></div></div></pre><p><span>La imagen de salida de la simulación con los datos anteriores se muestra con </span><code>Xdot(1)</code><span> y </span><code>Xdot(2)</code><span> </span></p><p><img src="https://i.ibb.co/DQwzZC4/2020-06-29-00-41-49.jpg" referrerpolicy="no-referrer" alt="Simulacion No.1"></p><h2 id='copyright'><span>Copyright</span></h2><p><span>Copyright © 2017 en adelante, Marco Polo Jácome Toss (</span><a href='https://jacometoss.github.io/Runge_Kutta_4th_6th/' target='_blank' class='url'>https://jacometoss.github.io/Runge_Kutta_4th_6th/</a><span>). Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.</span></p><p><span>Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.</span></p><p><span>Vea la información de Licencia de </span><code>RK4</code><span> para más detalle.</span></p><p><img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" alt="GPL-3" style="zoom:10%;" /></p></div></div>
 </body>
 </html>
