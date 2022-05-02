@@ -1,6 +1,6 @@
 # **Métodos de integración Runge-Kutta  y Regla Trapezoidal**
 
-​	El método de Runge-Kutta (RK) es un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explicito. Para diferenciar los métodos de solución explicito e implicito  se agregan los dos puntos siguientes:
+El método de Runge-Kutta (RK) es un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explicito. Para diferenciar los métodos de solución explicito e implícito  se agregan los dos puntos siguientes:
 
 ```tex
 Autor : Marco Polo Jácome Toss	
@@ -26,7 +26,7 @@ Donde
 
 
 
-​	***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente imagen se muestra la forma implícita del método de integración del punto medio.
+	***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente imagen se muestra la forma implícita del método de integración del punto medio.
 
 <img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;hf\left&space;(&space;x_{i}&space;&plus;&space;\frac{h}{2},&space;\frac{y_{i}&plus;y_{i&plus;1}}{2}&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}=y_{i}+hf\left ( x_{i} + \frac{h}{2}, \frac{y_{i}+y_{i+1}}{2} \right ), 0\leq i\leq n-1" />
 
@@ -43,7 +43,7 @@ Se considera el problema de valor inicial (PVI) de ecuaciones diferenciales ordi
 
 ## **1.1 ¿Por qué utilizar este código fuente ?**
 
-Debido a su simplicidad de resolver varias ecuaciones de estado es flexible para dar solución a modelos de  máquinas eléctricas  como para otros tipos de modelos que dependan principalmente del tiempo por defecto o en caso contrario que no involucre esta variable.
+Debido a su simplicidad de resolver varias ecuaciones de estado es flexible para dar solución a modelos de  máquinas eléctricas  como para otros tipos de modelos que dependan principalmente del tiempo o en caso contrario que no involucre esta variable.
 
 Las líneas de código siguientes pertenecen al archivo `start.sce` el cual contiene tres métodos de solución Rk4,Rk3 y Trapezoidal.
 
@@ -61,17 +61,17 @@ mnecudif(op)
 La siguiente lista de archivos dependientes muestra como se encuentra estructurado en forma general siempre se arranca toda la lista de archivos con "start.sce" por o tanto el resto de archivos es llamado para su implementación.
 
 1. Star
-    * attributes.sci
-    * ecuDif.sci
-    * rk4.sci (Multi ecuaciones)
-    * rk6.sci (Multi ecuaciones)
-    * rtrapezoidal (Multi ecuaciones) 
-    * mnecudif
+   * attributes.sci
+   * ecuDif.sci
+   * rk4.sci (Multi ecuaciones)
+   * rk6.sci (Multi ecuaciones)
+   * rtrapezoidal (Multi ecuaciones) 
+   * mnecudif
 
 
 ##  1.3 Ejecución del código fuente
 
-De manera sencilla iniciamos el Start.sce y se indica el tipo de método a ocupar en este caso se incluye también el método trapezoidal.
+De manera sencilla iniciamos el *Start.sce* y se indica el tipo de método a ocupar en este caso se incluye también el método trapezoidal.
 
 ```
 **Seleccione la forma de solución : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : **
@@ -82,6 +82,7 @@ De manera sencilla iniciamos el Start.sce y se indica el tipo de método a ocupa
 ##  1.4 Ecuaciones diferenciales : ecuDif.sci
 
 En el archivo ecuDif es necesario especificar las ecuaciones de estado, por lo que Xdot contiene dos ecuaciones de estado las cuales son impresas en los archivos rk4.sci y rk6.sci con el tiempo. En este archivo se introducen los valores necesarios de las ecuaciones de estado con sus variables de estado representados con  `Xdot`.
+
 ```scilab
 function [Xdot]=ecuDif(t,x)
   m=0.5;
@@ -125,6 +126,7 @@ endfunction
 ```
 
 ##  1.6 Método de Runge Kuta 4to Orden : rk4.sci
+
 ```scilab
 function [t,r]=rk4(t0, tf, N, conIni)
     matrixSize= size(conIni,1)
@@ -172,6 +174,7 @@ endfunction
 ##  1.8 Valores Iniciales de Simulación : attributes.sci
 
 El archivo contiene los atributos de a simulación y debe establecer el número de condiciones iniciales, las cuales dependen de las variables de estado a resolver y siendo necesario modificar la impresion disp() de los arhivos rk4 y rk6
+
 - ti: tiempo inicial de simulación
 - tf: tiempo final de simulación
 - varIni: variables iniciales
@@ -187,12 +190,12 @@ varIni=[0.01, 0.02]; //Cambiar #Xdot
 muestras=10000;
 
 ```
+
 ##  1.9 Opciones de solución: mnecudif.sci
 
 Las opciones mencionadas en la parte **1.1** pertenecen al código siguiente :
 
 ```scilab   
-
 function mnecudif(alg)
    if(alg == 1) then
       [t,r]=rk4(ti,tf,muestras,varIni);
@@ -283,11 +286,10 @@ La imagen de salida de la simulación con los datos anteriores se muestra con `X
 
 ## Copyright
 
-Copyright © 2017 en adelante, Marco Polo Jácome Toss (https://jacometoss.github.io/Runge_Kutta_4th_6th/).
-
-Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
+Copyright © 2017 en adelante, Marco Polo Jácome Toss (https://jacometoss.github.io/Runge_Kutta_4th_6th/). Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
 
 Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.
 
 Vea la información de Licencia de `RK4` para más detalle.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" alt="GPL-3" style="zoom:10%;" />
