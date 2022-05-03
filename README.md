@@ -283,6 +283,95 @@ La imagen de salida de la simulación con los datos anteriores se muestra con `X
 
 ![Simulacion No.1](https://i.ibb.co/DQwzZC4/2020-06-29-00-41-49.jpg)
 
+## Ejemplo #2 Solución analítica y numérica  
+
+Utilizando el método de la transformada de Laplace, se resolverá la ecuación diferencial siguiente:
+$$
+\frac{dy}{dx}+3y = 13Sin 2t \:\: \forall \:\: y\left ( 0 \right )=6
+$$
+Aplicando la transformada de Laplace a la Ecuación diferencial anterior, se obtiene la solución para `Y(S)`.
+$$
+Y\left (S \right )=\frac{6s^{2}+50}{\left ( s+3 \right )\left ( s^{2}+4 \right )}
+$$
+La solución en el dominio del tiempo se aplica la transformada inversa.
+$$
+y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t
+$$
+Graficando la solución anterior usando Scilab y editando la imagen con las opciones.
+
+```Scilab
+t=0:0.01:1;
+y=8*exp(-3*t)-2*cos(2*t)+3*sin(2*t)
+plot(t,y)
+xlabel("Tiempo, seg.")
+ylabel('y(t)')
+title('Solución de la Ecuación Diferencial')
+xgrid()
+```
+
+La gráfica siguiente muestra la solución de la ecuación diferencial .
+$$
+y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t
+$$
+![Solución ED](https://i.ibb.co/zhBRgWj/Grafica-ED-Solucion.png)
+
+Para dar solución es necesario configurar el archivo `ecuDif` de la forma siguiente:
+
+```scilab
+function [Xdot]=ecuDif(t,x)
+ Xdot=zeros(1,1); //#Xdot
+ Xdot(1,1)=13*sin(2*t)-3*x(1)
+endfunction
+```
+
+Modificamos las condiciones iniciales del archivo `attributes`.
+
+```scilab
+global ti tf varIni muestras    
+ti=0;
+tf=1;
+varIni=[6,0]; //Cambiar #Xdot
+muestras=1000;
+```
+
+Y el archivo `mnecudif` se debe modificar para mostrar únicamente una solución, si observas esta ecuación diferencial tiene una variable.
+
+```scilab
+function mnecudif(alg)
+if(alg == 1) then
+[t,r]=rk4(ti,tf,muestras,varIni);
+plot(t,[r(1,:)])
+legend('Xdot(1)')
+xlabel('tiempo, seg')
+ylabel('Y')
+title('Solución Runge Kutta orden 4')
+xgrid
+elseif ( alg == 2) then
+[t,r]=rk6(ti,tf,muestras,varIni);
+plot(t,[r(1,:)'])
+legend('Xdot(1)')
+xlabel('tiempo, seg')
+ylabel('Ysol')
+title('Solución Runge Kutta orden 6')
+xgrid
+elseif (alg == 3) then
+[t,r]=rtrapezoidal(ti,tf,muestras,varIni);
+plot(t,[r(1,:)'])
+legend('Xdot(1)')
+xlabel('tiempo, seg')
+ylabel('Y')
+title('Solución Regla Trapezoidal Explicita')
+xgrid
+else
+disp('Error: Seleccione un método de solución ');
+end
+endfunction 
+```
+
+Finalmente al realizar estas modificaciones podrás observar la solución siguiente:
+
+![Solución EDO](https://i.ibb.co/TvznhKN/Grafica-ED-Solucion-2.png)
+
 ## Copyright
 
 Copyright © 2017 en adelante, Marco Polo Jácome Toss (https://jacometoss.github.io/Runge_Kutta_4th_6th/). Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
@@ -290,3 +379,5 @@ Copyright © 2017 en adelante, Marco Polo Jácome Toss (https://jacometoss.githu
 Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.
 
 Vea la información de Licencia de `RK4` para más detalle.
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" alt="GPL-3" style="zoom:10%;" />
