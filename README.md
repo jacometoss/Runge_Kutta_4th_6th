@@ -1,6 +1,6 @@
 # **Métodos de integración Runge-Kutta  y Regla Trapezoidal**
 
-El método de Runge-Kutta (RK) es un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias. En esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explicito. Para diferenciar los métodos de solución explicito e implícito  se agregan los dos puntos siguientes:
+El método de Runge-Kutta (RK) es un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias, en esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explicita, para diferenciar los métodos de solución explicito e implícito  se agregan los dos puntos siguientes:
 
 ```tex
 Autor : Marco Polo Jácome Toss	
@@ -8,9 +8,10 @@ Fecha de creación :  12 de Septiembre del 2017
 Licencia : GNU General Public License (GPL) 3.0
 Plataforma : Scilab
 Código fuente creado para dar solución numérica a múltiples ecuaciones diferenciales.
+Actualizado : 04 de Abril del 2022
 ```
 
-***Método de integración explicito***. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y) como ejemplo de un método de integración explicito se muestra en la siguiente imagen la regla del punto medio.
+***Método de integración explicito***. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y), como ejemplo de un método de integración explicito se muestra  la regla del punto medio.
 
 
 
@@ -26,26 +27,26 @@ Donde
 
 
 
-	***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente imagen se muestra la forma implícita del método de integración del punto medio.
+***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente ecuación se muestra la forma implícita del método de integración del punto medio.
 
 <img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;hf\left&space;(&space;x_{i}&space;&plus;&space;\frac{h}{2},&space;\frac{y_{i}&plus;y_{i&plus;1}}{2}&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}=y_{i}+hf\left ( x_{i} + \frac{h}{2}, \frac{y_{i}+y_{i+1}}{2} \right ), 0\leq i\leq n-1" />
 
 
 La ventaja del "scripting" es poder dar solución en forma ordenada a **n** número de ecuaciones diferenciales.
 
-
-
-## **Problemas de valor inicial** 
+## Problemas de valor inicial 
 
 Se considera el problema de valor inicial (PVI) de ecuaciones diferenciales ordinarias (EDO) :
 
 <center><img src="https://latex.codecogs.com/gif.latex?\left.\begin{matrix}&space;y^{'}=f(x,y(x)))\\&space;y\left&space;(&space;x_{0}&space;\right&space;)=y_{0}&space;\end{matrix}\right\}&space;y,f\in&space;\mathbb{R}^{m},x\in&space;\left&space;[&space;x_{0},x_{N}&space;\right]" title="\left.\begin{matrix} y^{'}=f(x,y(x)))\\ y\left ( x_{0} \right )=y_{0} \end{matrix}\right\} y,f\in \mathbb{R}^{m},x\in \left [ x_{0},x_{N} \right]" /></center>
 
-## **1.1 ¿Por qué utilizar este código fuente ?**
+Lo anterior es bastante importante debido a que debemos indicar las condiciones iniciales para poder dar solución a una EDO.
+
+## 1.1 ¿Por qué utilizar este código fuente ?
 
 Debido a su simplicidad de resolver varias ecuaciones de estado es flexible para dar solución a modelos de  máquinas eléctricas  como para otros tipos de modelos que dependan principalmente del tiempo o en caso contrario que no involucre esta variable.
 
-Las líneas de código siguientes pertenecen al archivo `start.sce` el cual contiene tres métodos de solución Rk4,Rk3 y Trapezoidal.
+Las líneas de código siguientes pertenecen al archivo `start.sce` el cual contiene tres métodos de solución Rk4,Rk3 y Trapezoidal ya antes mencionados.
 
 ```scilab
 getd .;
@@ -58,9 +59,9 @@ mnecudif(op)
 
 ##  1.2 Lista de archivos dependientes ![VERSION](https://img.shields.io/badge/Scilab-6.0.2-lightgrey)
 
-La siguiente lista de archivos dependientes muestra como se encuentra estructurado en forma general siempre se arranca toda la lista de archivos con "start.sce" por o tanto el resto de archivos es llamado para su implementación.
+La siguiente lista de archivos (dependientes) muestra como se encuentra estructurado en forma general el programa y siempre debe ejecutar el  archivo `start.sce`  para poder llamar la lista restante de archivos con extensión `*.sci` .
 
-1. Star
+1. Start
    * attributes.sci
    * ecuDif.sci
    * rk4.sci (Multi ecuaciones)
@@ -71,17 +72,17 @@ La siguiente lista de archivos dependientes muestra como se encuentra estructura
 
 ##  1.3 Ejecución del código fuente
 
-De manera sencilla iniciamos el *Start.sce* y se indica el tipo de método a ocupar en este caso se incluye también el método trapezoidal.
+De manera sencilla iniciamos el *`Start.sce`* e inmediatamente se indica el tipo de método a ocupar.
 
-```
+```scilab
 **Seleccione la forma de solución : RK4(1) / RK6(2) / RTRAPEZOIDAL(3) : **
 ```
 
-
-
 ##  1.4 Ecuaciones diferenciales : ecuDif.sci
 
-En el archivo ecuDif es necesario especificar las ecuaciones de estado, por lo que Xdot contiene dos ecuaciones de estado las cuales son impresas en los archivos rk4.sci y rk6.sci con el tiempo. En este archivo se introducen los valores necesarios de las ecuaciones de estado con sus variables de estado representados con  `Xdot`.
+En el archivo `ecuDif` es necesario especificar las ecuaciones de estado, por lo que `Xdot` contiene dos ecuaciones de estado por este motivo se tiene dos variables `Xdot(1,1)` y `Xdot(2,1)`. Estas variables se pasan a los archivos `rk4.sci` y `rk6.sci` junto con la variable de tiempo para poder dar solución a la EDO. 
+
+En este archivo se introducen las constantes y valores necesarios de las ecuaciones de estado con sus respectivas variables de estado representados con  `Xdot`, todo es un arreglo matricial.
 
 ```scilab
 function [Xdot]=ecuDif(t,x)
@@ -98,7 +99,7 @@ endfunction
 
 ##  1.5 Método de Runge-Kutta 6to Orden : rk6.sci
 
-Siendo necesario cambiar la línea del archivo rk4 o rk6 que contiene  disp([t(i),r(1,i)',r(2,i)']) al incrementar las ecuaciones o únicamente al mostrar una al igual que las variables iniciames mostradas en el arhivo **attributes.sci**
+Es necesario cambiar la línea del archivo rk4 o rk6 que contiene  **`disp([t(i),r(1,i)',r(2,i)'])`** al incrementar las variables y ecuaciones o únicamente  mostrar una al igual que las variables iniciales mostradas en el archivo **`attributes.sci`**.
 
 
 ```scilab
@@ -173,14 +174,14 @@ endfunction
 
 ##  1.8 Valores Iniciales de Simulación : attributes.sci
 
-El archivo contiene los atributos de a simulación y debe establecer el número de condiciones iniciales, las cuales dependen de las variables de estado a resolver y siendo necesario modificar la impresion disp() de los arhivos rk4 y rk6
+El archivo contiene los atributos de la simulación y debe establecer el número de condiciones iniciales, las cuales dependen de las variables de estado a resolver siendo necesario modificar la impresión  **`disp([t(i),r(1,i)',r(2,i)'])`**  de los archivos rk4 y rk6.
 
-- ti: tiempo inicial de simulación
-- tf: tiempo final de simulación
-- varIni: variables iniciales
-- muestras: muestras, 
+- `ti`: tiempo inicial de simulación.
+- `tf`: tiempo final de simulación.
+- `varIni`: variables iniciales.
+- `muestras`: muestras.
 
-Los valores iniciales mostrados en la parte inferior son el tiempo inicial, tiempo final, valores iniciales para dos variables y el número de muestras.
+Los valores iniciales mostrados en el bloque siguiente  son el tiempo inicial, tiempo final, valores iniciales en este caso para dos variables y el número de muestras.
 
 ```scilab   
 global ti tf varIni muestras    
@@ -188,7 +189,6 @@ ti=0;
 tf=10;
 varIni=[0.01, 0.02]; //Cambiar #Xdot
 muestras=10000;
-
 ```
 
 ##  1.9 Opciones de solución: mnecudif.sci
@@ -225,27 +225,26 @@ function mnecudif(alg)
       disp('Error: Seleccione un método de solución ');
    end
 endfunction 
-
 ```
 
 ##  Ejemplo #1 Ecuación del péndulo
 
-Un péndulo simple se define como una partícula de masa "m" suspendida de "O" por un hilo inextensible de longitud "L" y de masa despreciable
+Un péndulo simple se define como una partícula de masa "m" suspendida "O" por un hilo inextensible de longitud "L" y de masa despreciable.
 
-De la segunda Ley de Newton y siendo la aceleración de la partícula hacia adentro de la trayectoria circular.
+Aplicando la segunda Ley de Newton,  siendo la aceleración de la partícula hacia adentro de la trayectoria circular se obtiene:
 
 <img src="https://latex.codecogs.com/gif.latex?ma_{n}=T-mg\cdot&space;\cos&space;\theta" title="ma_{n}=T-mg\cdot \cos \theta" />
 
-Siendo la aceleración de la partícula hacia adentro dada por 
+Siendo la aceleración de la partícula hacia adentro dada por:
 
 <img src="https://latex.codecogs.com/gif.latex?a_{n}=v^{2}/L" title="a_{n}=v^{2}/L" />
 
-La aceleración tangencial de la partícula
+La aceleración tangencial de la partícula es:
 
 <img src="https://latex.codecogs.com/gif.latex?a_{t}=dv/dt" title="a_{t}=dv/dt" />
 
 
-De la segunda Ley de Newton incluyendo la fricción.
+De la segunda Ley de Newton incluyendo la fricción se obtiene:
 
 <img src="https://latex.codecogs.com/gif.latex?ml\ddot{\theta}=-mg\sin&space;\theta&space;-kl\dot{\theta}" title="ml\ddot{\theta}=-mg\sin \theta -kl\dot{\theta}" />
 
@@ -258,13 +257,13 @@ Las variables de estado son :
 
 <img src="https://latex.codecogs.com/gif.latex?x_{1}=\theta,&space;x_{2}=\frac{d\theta}{dt}" title="x_{1}=\theta, x_{2}=\frac{d\theta}{dt}" />
 
-Por lo tanto las ecuaciones de estado son las siguientes :
+Por lo tanto, las ecuaciones de estado son las siguientes:
 
 <img src="https://latex.codecogs.com/gif.latex?\dot{x_{1}}=x_{2}" title="\dot{x_{1}}=x_{2}" />
 
 <img src="https://latex.codecogs.com/gif.latex?\dot{x_{2}}=-\frac{g}{l}\sin&space;x_{1}&space;-&space;\frac{k}{m}x_{2}" title="\dot{x_{2}}=-\frac{g}{l}\sin x_{1} - \frac{k}{m}x_{2}" />
 
-Estableciendo la ecuaciones en el archivo  `ecuDif.sci` y valores correspondientes.
+Estableciendo la ecuaciones en el archivo **`ecuDif.sci`** y valores correspondientes.
 
 ```scilab
 function [Xdot]=ecuDif(t,x)
@@ -279,25 +278,25 @@ function [Xdot]=ecuDif(t,x)
 endfunction
 ```
 
-La imagen de salida de la simulación con los datos anteriores se muestra con `Xdot(1)` y `Xdot(2)` 
+La solución para`Xdot(1)` y `Xdot(2)` de las ecuaciones de estado es:
 
 ![Simulacion No.1](https://i.ibb.co/DQwzZC4/2020-06-29-00-41-49.jpg)
 
 ## Ejemplo #2 Solución analítica y numérica  
 
-Utilizando el método de la transformada de Laplace, se resolverá la ecuación diferencial siguiente:
+Utilizando el método de la transformada de Laplace se resolverá la ecuación diferencial siguiente:
 $$
 \frac{dy}{dx}+3y = 13Sin 2t \:\: \forall \:\: y\left ( 0 \right )=6
 $$
-Aplicando la transformada de Laplace a la Ecuación diferencial anterior, se obtiene la solución para `Y(S)`.
+Aplicando la transformada de Laplace a la Ecuación diferencial anterior se obtiene la solución para `Y(S)`.
 $$
 Y\left (S \right )=\frac{6s^{2}+50}{\left ( s+3 \right )\left ( s^{2}+4 \right )}
 $$
-La solución en el dominio del tiempo se aplica la transformada inversa.
+La solución en el dominio del tiempo se obtiene con la transformada inversa.
 $$
 y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t
 $$
-Graficando la solución anterior usando Scilab y editando la imagen con las opciones.
+El resultado anterior se grafica con Scilab mediante el bloque siguiente:
 
 ```Scilab
 t=0:0.01:1;
@@ -309,7 +308,7 @@ title('Solución de la Ecuación Diferencial')
 xgrid()
 ```
 
-La gráfica siguiente muestra la solución de la ecuación diferencial .
+La solución de la ecuación diferencial y gráfica se muestra a continuación:
 $$
 y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t
 $$
@@ -324,7 +323,7 @@ function [Xdot]=ecuDif(t,x)
 endfunction
 ```
 
-Modificamos las condiciones iniciales del archivo `attributes`.
+Modificamos las condiciones iniciales del archivo `attributes` como se muestra:
 
 ```scilab
 global ti tf varIni muestras    
@@ -334,7 +333,7 @@ varIni=[6,0]; //Cambiar #Xdot
 muestras=1000;
 ```
 
-Y el archivo `mnecudif` se debe modificar para mostrar únicamente una solución, si observas esta ecuación diferencial tiene una variable.
+Se debe ajustar el archivo `mnecudif` para mostrar únicamente una solución, esta ecuación diferencial tiene una única variable.
 
 ```scilab
 function mnecudif(alg)
@@ -379,5 +378,3 @@ Copyright © 2017 en adelante, Marco Polo Jácome Toss (https://jacometoss.githu
 Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.
 
 Vea la información de Licencia de `RK4` para más detalle.
-
-
