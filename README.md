@@ -286,17 +286,11 @@ La solución para`Xdot(1)` y `Xdot(2)` de las ecuaciones de estado es:
 ## Ejemplo #2 Solución analítica y numérica  
 
 Utilizando el método de la transformada de Laplace se resolverá la ecuación diferencial siguiente:
-$$
-\frac{dy}{dx}+3y = 13Sin 2t \:\: \forall \:\: y\left ( 0 \right )=6
-$$
+$$ \frac{dy}{dx}+3y = 13Sin 2t \:\: \forall \:\: y\left ( 0 \right )=6 $$
 Aplicando la transformada de Laplace a la Ecuación diferencial anterior se obtiene la solución para `Y(S)`.
-$$
-Y\left (S \right )=\frac{6s^{2}+50}{\left ( s+3 \right )\left ( s^{2}+4 \right )}
-$$
+$$ Y\left (S \right )=\frac{6s^{2}+50}{\left ( s+3 \right )\left ( s^{2}+4 \right )} $$
 La solución en el dominio del tiempo se obtiene con la transformada inversa.
-$$
-y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t
-$$
+$$ y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t $$
 El resultado anterior se grafica con Scilab mediante el bloque siguiente:
 
 ```Scilab
@@ -310,9 +304,8 @@ xgrid()
 ```
 
 La solución de la ecuación diferencial y gráfica se muestra a continuación:
-$$
-y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t
-$$
+$$ y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t $$
+
 ![Solución ED](https://i.ibb.co/zhBRgWj/Grafica-ED-Solucion.png)
 
 Para dar solución es necesario configurar el archivo `ecuDif` de la forma siguiente:
