@@ -304,7 +304,10 @@ xgrid()
 ```
 
 La solución de la ecuación diferencial y gráfica se muestra a continuación:
-$$ y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t $$
+
+$$ 
+y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t 
+$$
 
 ![Solución ED](https://i.ibb.co/zhBRgWj/Grafica-ED-Solucion.png)
 
