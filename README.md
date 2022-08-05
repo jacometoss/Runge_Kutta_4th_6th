@@ -1,6 +1,8 @@
 # **Métodos de integración Runge-Kutta  y Regla Trapezoidal**
 
-El método de Runge-Kutta (RK) es un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias, en esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explicita, para diferenciar los métodos de solución explicito e implícito  se agregan los dos puntos siguientes:
+![VERSION](https://img.shields.io/badge/Scilab-6.1.1-red)
+
+El **método de Runge-Kutta** (RK) es un conjunto de métodos iterativos (implícitos y explícitos) para la aproximación de soluciones de ecuaciones diferenciales ordinarias, en esta documentación se muestra el de cuarto y sexto orden. Otro método agregado es la  Regla Trapezoidal que puede ser explícita, para diferenciar los métodos de solución explícito e implícito  se agregan los dos puntos siguientes:
 
 
 ```tex
@@ -12,7 +14,7 @@ Código fuente creado para dar solución numérica a múltiples ecuaciones difer
 Actualizado : 04 de Abril del 2022
 ```
 
-***Método de integración explicito***. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y), como ejemplo de un método de integración explicito se muestra  la regla del punto medio.
+***Método de integración explícito***. En este método es posible calcular la aproximación en cada paso directamente evaluando la función f(x,y), como ejemplo de un método de integración explicito se muestra  la regla del punto medio.
 
 
 
@@ -28,12 +30,12 @@ Donde
 
 
 
-***Método de integración implicito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente ecuación se muestra la forma implícita del método de integración del punto medio.
+***Método de integración implícito***. Las aproximaciones en este método vienen definidas por un sistema de ecuaciones implícito. En la siguiente ecuación se muestra la forma implícita del método de integración del punto medio.
 
 <img src="https://latex.codecogs.com/gif.latex?y_{i&plus;1}=y_{i}&plus;hf\left&space;(&space;x_{i}&space;&plus;&space;\frac{h}{2},&space;\frac{y_{i}&plus;y_{i&plus;1}}{2}&space;\right&space;),&space;0\leq&space;i\leq&space;n-1" title="y_{i+1}=y_{i}+hf\left ( x_{i} + \frac{h}{2}, \frac{y_{i}+y_{i+1}}{2} \right ), 0\leq i\leq n-1" />
 
 
-La ventaja del "scripting" es poder dar solución en forma ordenada a **n** número de ecuaciones diferenciales.
+La ventaja del "*scripting*" es poder dar solución en forma ordenada a **n** número de ecuaciones diferenciales.
 
 ## Problemas de valor inicial 
 
@@ -58,7 +60,7 @@ mnecudif(op)
 
 ![GitHub Logo](https://image.ibb.co/jpL5qU/1.jpg)
 
-##  1.2 Lista de archivos dependientes ![VERSION](https://img.shields.io/badge/Scilab-6.0.2-lightgrey)
+##  1.2 Lista de archivos dependientes 
 
 La siguiente lista de archivos (dependientes) muestra como se encuentra estructurado en forma general el programa y siempre debe ejecutar el  archivo `start.sce`  para poder llamar la lista restante de archivos con extensión `*.sci` .
 
@@ -286,11 +288,17 @@ La solución para`Xdot(1)` y `Xdot(2)` de las ecuaciones de estado es:
 ## Ejemplo #2 Solución analítica y numérica  
 
 Utilizando el método de la transformada de Laplace se resolverá la ecuación diferencial siguiente:
-$$ \frac{dy}{dx}+3y = 13Sin 2t \:\: \forall \:\: y\left ( 0 \right )=6 $$
+$$
+\frac{dy}{dx}+3y = 13Sin 2t \:\: \forall \:\: y\left ( 0 \right )=6
+$$
 Aplicando la transformada de Laplace a la Ecuación diferencial anterior se obtiene la solución para `Y(S)`.
-$$ Y\left (S \right )=\frac{6s^{2}+50}{\left ( s+3 \right )\left ( s^{2}+4 \right )} $$
+$$
+Y\left (S \right )=\frac{6s^{2}+50}{\left ( s+3 \right )\left ( s^{2}+4 \right )}
+$$
 La solución en el dominio del tiempo se obtiene con la transformada inversa.
-$$ y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t $$
+$$
+y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t 
+$$
 El resultado anterior se grafica con Scilab mediante el bloque siguiente:
 
 ```Scilab
@@ -305,8 +313,8 @@ xgrid()
 
 La solución de la ecuación diferencial y gráfica se muestra a continuación:
 
-$$ 
-y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t 
+$$
+y\left ( t \right )=8e^{-3t}-2Cos2t+3Sin2t
 $$
 
 ![Solución ED](https://i.ibb.co/zhBRgWj/Grafica-ED-Solucion.png)
@@ -368,10 +376,15 @@ Finalmente al realizar estas modificaciones podrás observar la solución siguie
 
 ![Solución EDO](https://i.ibb.co/TvznhKN/Grafica-ED-Solucion-2.png)
 
-## Copyright
+## **Copyright**
 
-Copyright © 2017 en adelante, Marco Polo Jácome Toss (https://jacometoss.github.io/Runge_Kutta_4th_6th/). Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
+Copyright © 2017 en adelante, Marco Polo Jácome Toss ([rk4,rk6,trapezoidal](https://jacometoss.github.io/Runge_Kutta_4th_6th/)). Este programa es software libre: usted puede redistribuirlo y /o modificarlo bajo los términos de la Licencia General GNU (GNU General Public License) publicado por la Fundación para el Software Libre para la versión 3 de dicha Licencia o anterior, o cualquier versión posterior.
 
 Este programa se distribuye con la esperanza de que sea útil pero sin ninguna garantía; incluso sin la garantía implícita de comercialización o idoneidad para  un propósito en particular.
 
 Vea la información de Licencia de `RK4` para más detalle.
+
+## **Información de la obra**
+
+<a href="https://www.safecreative.org/work/2208051726797" xmlns:cc="http://creativecommons.org/ns#" rel="cc:license"><img src="https://resources.safecreative.org/work/2208051726797/label/standard2-150" style="border:0;" alt="Safe Creative #2208051726797"/></a>
+
